@@ -69,10 +69,10 @@ format = 1
 tile_data = PoolIntArray( -327683, 0, 0, -327682, 0, 0, -393214, 0, 0, -393213, 0, 0 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
-position = Vector2( -315, -53 )
-scale = Vector2( 2.53442, 4.8944 )
+position = Vector2( -15, -95 )
+scale = Vector2( 0.704077, 1.53427 )
+motion/sync_to_physics = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 position = Vector2( 0.789162, 1.22589 )
 current = true
-zoom = Vector2( 0.8, 2.8 )
