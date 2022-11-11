@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Half.png-8a176003783027217c290b8c02ffc2ed.stex"
+path="res://.import/LowJump.png-adf256d18ec247c702efcd0276b10dcc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blocks/Half.png"
-dest_files=[ "res://.import/Half.png-8a176003783027217c290b8c02ffc2ed.stex" ]
+source_file="res://Assets/Images/LowJump.png"
+dest_files=[ "res://.import/LowJump.png-adf256d18ec247c702efcd0276b10dcc.stex" ]
 
 [params]
 

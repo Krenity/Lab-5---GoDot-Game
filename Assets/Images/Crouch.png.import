@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Flat.png-9863f1341937ecda6b2e39a0110ad1b3.stex"
+path="res://.import/Crouch.png-98ef91b819861830542ed4a13ec646a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blocks/Flat.png"
-dest_files=[ "res://.import/Flat.png-9863f1341937ecda6b2e39a0110ad1b3.stex" ]
+source_file="res://Assets/Images/Crouch.png"
+dest_files=[ "res://.import/Crouch.png-98ef91b819861830542ed4a13ec646a8.stex" ]
 
 [params]
 
