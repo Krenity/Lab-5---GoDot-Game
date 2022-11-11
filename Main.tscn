@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Blocks/Half.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Blocks/Untitled.png" type="Texture" id=2]
 [ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player.gd" type="Script" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -69,10 +70,11 @@ format = 1
 tile_data = PoolIntArray( -327683, 0, 0, -327682, 0, 0, -393214, 0, 0, -393213, 0, 0 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
-position = Vector2( -15, -95 )
+position = Vector2( -63, -54 )
 scale = Vector2( 0.704077, 1.53427 )
 motion/sync_to_physics = true
+script = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
-position = Vector2( 0.789162, 1.22589 )
+position = Vector2( -39.7684, 6.51776 )
 current = true
