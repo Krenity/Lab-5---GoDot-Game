@@ -12,12 +12,15 @@ config_version=4
 
 config/name="Lab- 5"
 run/main_scene="res://Main.tscn"
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=1080
-window/size/height=1920
+window/size/width=1440
+window/size/height=1080
 window/size/borderless=true
 window/stretch/aspect="keep"
 
