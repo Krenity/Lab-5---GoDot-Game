@@ -15,8 +15,11 @@ func _ready():
 func _physics_process(delta):
 	print(jumpheight)
 	print(motion)
-	
-	
+	if not is_on_floor():
+		print("true")
+		Input.action_release("move_right")
+		Input.action_release("move_down")
+		Input.action_release("move_left")
 	motion.y += gravity
 	if motion.y > maxgravity:
 		motion.y = maxgravity
