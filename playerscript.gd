@@ -44,16 +44,13 @@ func _physics_process(delta):
 		motion.y = maxgravity
 	if is_on_floor():
 		if Input.is_action_pressed("move_down"):
-			animation.play("Jump")
 			jumpheight += -5
 		if Input.is_action_just_released("move_down"):
-			animation.play("Jump")
 			if jumpheight < maxjump:
 				motion.y = maxjump
 				jumpheight = -100
 			else:
 				motion.y = jumpheight
-				animation.play("Jump")
 				jumpheight = -100
 	if Input.is_action_pressed("move_right"):
 		if is_on_floor():
@@ -72,7 +69,7 @@ func _physics_process(delta):
 			
 	else:
 		if is_on_ceiling():
-			motion.y = 5
+			motion.y = 10
 		if is_on_floor() and jumping == false:
 			if is_on_floor():
 				animation.play("Idle")
