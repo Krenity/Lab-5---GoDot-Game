@@ -2,6 +2,8 @@ extends KinematicBody2D
 const maxjump = -400
 var jumpheight = -50
 var jumping = false
+var bouncemax = 1
+var playerdirection = 0
 const gravity = 9
 const maxgravity = 1000
 const playerspeed = 150
@@ -13,8 +15,20 @@ func _ready():
 
 
 func _physics_process(delta):
-	print(jumpheight)
-	print(motion)
+	print(jumpheight, motion)
+	if Input.is_action_pressed("move_left"):
+		playerdirection = 0
+	if Input.is_action_pressed("move_right"):
+		playerdirection = 1
+	if not is_on_floor():
+		if is_on_wall() and playerdirection == 0 and bouncemax == 1:
+			motion.x = playerspeed
+			motion.y = -200
+			bouncemax = 0
+		if is_on_wall() and playerdirection == 1 and bouncemax == 1:
+			motion.x = -playerspeed
+			motion.y = -200
+			bouncemax = 0
 	if not is_on_floor():
 		print("true")
 		Input.action_release("move_right")
@@ -51,6 +65,7 @@ func _physics_process(delta):
 			motion.y = 5
 		if is_on_floor() and jumping == false:
 			motion.x = 0
+			bouncemax = 1
 		jumping = false
 	motion = move_and_slide(motion, UP)
 	Engine.time_scale = 3
