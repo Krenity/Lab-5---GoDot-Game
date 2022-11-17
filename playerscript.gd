@@ -3,6 +3,7 @@ const maxjump = -400
 var jumpheight = -50
 var jumping = false
 var bouncemax = 1
+onready var animation = $AnimationPlayer
 var playerdirection = 0
 const gravity = 9
 const maxgravity = 1000
@@ -18,7 +19,11 @@ func _physics_process(delta):
 	print(jumpheight, motion)
 	if Input.is_action_pressed("move_left"):
 		playerdirection = 0
+		$Sprite.flip_h = true
+		animation.play("Run")
 	if Input.is_action_pressed("move_right"):
+		$Sprite.flip_h = false
+		animation.play("Run")
 		playerdirection = 1
 	if not is_on_floor():
 		if is_on_wall() and playerdirection == 0 and bouncemax == 1:
@@ -39,23 +44,28 @@ func _physics_process(delta):
 		motion.y = maxgravity
 	if is_on_floor():
 		if Input.is_action_pressed("move_down"):
-			$Sprite.texture = preload("res://Assets/Images/MediumJump.png")
+			animation.play("Jump")
 			jumpheight += -5
-		if jumpheight < maxjump:
-				$Sprite.texture = preload("res://Assets/Images/HighJump.png")
 		if Input.is_action_just_released("move_down"):
-			$Sprite.texture = preload("res://Assets/Images/LowJump.png")
+			animation.play("Jump")
 			if jumpheight < maxjump:
 				motion.y = maxjump
 				jumpheight = -100
 			else:
 				motion.y = jumpheight
+				animation.play("Jump")
 				jumpheight = -100
 	if Input.is_action_pressed("move_right"):
+		if is_on_floor():
+			$Sprite.flip_h = false
+			animation.play("Run")
 		motion.x = playerspeed 
 		if Input.is_action_pressed("move_down"):
 			motion.x = 0
 	elif Input.is_action_pressed("move_left"):
+		if is_on_floor():
+			$Sprite.flip_h = true
+			animation.play("Run")
 		motion.x = -playerspeed 
 		if Input.is_action_pressed("move_down"):
 			motion.x = 0
@@ -64,6 +74,8 @@ func _physics_process(delta):
 		if is_on_ceiling():
 			motion.y = 5
 		if is_on_floor() and jumping == false:
+			if is_on_floor():
+				animation.play("Idle")
 			motion.x = 0
 			bouncemax = 1
 		jumping = false
