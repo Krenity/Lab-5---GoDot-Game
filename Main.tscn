@@ -220,7 +220,7 @@ extents = Vector2( 142.509, 144.148 )
 extents = Vector2( 297.771, 136.882 )
 
 [sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 221.583, 10 )
+extents = Vector2( 225.125, 10 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -574,7 +574,7 @@ polygon = PoolVector2Array( -47.6667, -460.667, -54.6667, -451.333, -81.6667, -4
 one_way_collision = true
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Collisions"]
-position = Vector2( -238.917, -426 )
+position = Vector2( -242.542, -1038.33 )
 shape = SubResource( 26 )
 one_way_collision = true
 
