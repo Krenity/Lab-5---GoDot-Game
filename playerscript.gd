@@ -58,6 +58,7 @@ func _physics_process(delta):
 			animation.play("Run")
 		motion.x = playerspeed 
 		if Input.is_action_pressed("move_down"):
+			animation.play("Jump")
 			motion.x = 0
 	elif Input.is_action_pressed("move_left"):
 		if is_on_floor():
@@ -65,11 +66,12 @@ func _physics_process(delta):
 			animation.play("Run")
 		motion.x = -playerspeed 
 		if Input.is_action_pressed("move_down"):
+			animation.play("Jump")
 			motion.x = 0
 			
 	else:
 		if is_on_ceiling():
-			motion.y = 10
+			motion.y = 5
 		if is_on_floor() and jumping == false:
 			if is_on_floor():
 				animation.play("Idle")
