@@ -508,6 +508,7 @@ drag_margin_v_enabled = true
 smoothing_speed = 3.346
 
 [node name="Collisions" type="StaticBody2D" parent="."]
+visible = false
 scale = Vector2( 3, 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions"]
