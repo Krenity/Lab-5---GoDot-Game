@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=46 format=2]
+=======
+[gd_scene load_steps=45 format=2]
+>>>>>>> 2ea5c5dfa5e966819a30e8b2188eb3c6e5331065
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -23,7 +27,11 @@
 [ext_resource path="res://Assets/Decorations/Sky.png" type="Texture" id=21]
 [ext_resource path="res://Assets/Decorations/TopLayer.png" type="Texture" id=22]
 [ext_resource path="res://Assets/Decorations/Light.png" type="Texture" id=23]
+<<<<<<< HEAD
 [ext_resource path="res://coin.tscn" type="PackedScene" id=24]
+=======
+[ext_resource path="res://Assets/Blocks/Backround.tres" type="TileSet" id=24]
+>>>>>>> 2ea5c5dfa5e966819a30e8b2188eb3c6e5331065
 
 [sub_resource type="Animation" id=4]
 resource_name = "PressS"
@@ -262,7 +270,6 @@ tile_data = PoolIntArray( -1507359, 0, 196609, -1507358, 0, 7, -1507357, 0, 2, -
 [node name="BackroundDirt" type="TileMap" parent="."]
 position = Vector2( 0, -1.52588e-05 )
 scale = Vector2( 3, 3 )
-tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_clip_uv = true
 format = 1
