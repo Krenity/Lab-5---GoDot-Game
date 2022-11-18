@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FOOD.png-2533e1c3fac4405ca869e3bc3ed27c2e.stex"
+path="res://.import/Backround.png-62850abcaa2f6a177948d321a6cca6bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/FOOD.png"
-dest_files=[ "res://.import/FOOD.png-2533e1c3fac4405ca869e3bc3ed27c2e.stex" ]
+source_file="res://Assets/Blocks/Backround.png"
+dest_files=[ "res://.import/Backround.png-62850abcaa2f6a177948d321a6cca6bd.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
