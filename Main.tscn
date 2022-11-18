@@ -991,7 +991,7 @@ texture = ExtResource( 26 )
 occluder = SubResource( 31 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -756.037, 508.722 )
+position = Vector2( -1082.39, -3615.12 )
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
 current = true
@@ -1114,7 +1114,7 @@ polygon = PoolVector2Array( -351.837, -992.15, -336.023, -991.958, -335.842, -97
 
 [node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Collisions"]
 position = Vector2( -110.274, -284.198 )
-polygon = PoolVector2Array( -356.484, -995.217, 100.03, -996.264, 97.2167, -979.105, -356.609, -976.93 )
+polygon = PoolVector2Array( -356.484, -995.217, 100.03, -996.264, 100.214, -978.517, -356.609, -976.93 )
 one_way_collision = true
 
 [node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Collisions"]
