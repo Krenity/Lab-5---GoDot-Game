@@ -270,6 +270,7 @@ tile_data = PoolIntArray( -1507359, 0, 196609, -1507358, 0, 7, -1507357, 0, 2, -
 [node name="BackroundDirt" type="TileMap" parent="."]
 position = Vector2( 0, -1.52588e-05 )
 scale = Vector2( 3, 3 )
+tile_set = ExtResource( 24 )
 cell_size = Vector2( 16, 16 )
 cell_clip_uv = true
 format = 1
