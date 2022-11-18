@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Assets/Decorations/Sky.png" type="Texture" id=21]
 [ext_resource path="res://Assets/Decorations/TopLayer.png" type="Texture" id=22]
 [ext_resource path="res://Assets/Decorations/Light.png" type="Texture" id=23]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=24]
 
 [sub_resource type="Animation" id=4]
 resource_name = "PressS"
@@ -218,6 +219,8 @@ extents = Vector2( 142.509, 144.148 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 297.771, 136.882 )
+
+[sub_resource type="RectangleShape2D" id=26]
 
 [node name="Node2D" type="Node2D"]
 
@@ -570,3 +573,19 @@ position = Vector2( -237.634, -378.808 )
 rotation = -0.527178
 scale = Vector2( 2.90385, 2.90385 )
 texture = ExtResource( 17 )
+
+[node name="coins" type="Area2D" parent="."]
+
+[node name="Food" parent="coins" instance=ExtResource( 24 )]
+position = Vector2( -613, 377 )
+scale = Vector2( 2.35525, 2.35525 )
+
+[node name="Light2D" type="Light2D" parent="coins/Food"]
+scale = Vector2( 0.428829, 0.598288 )
+texture = ExtResource( 13 )
+texture_scale = 0.3
+color = Color( 0.0352941, 0.54902, 1, 1 )
+energy = 0.7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coins"]
+shape = SubResource( 26 )
