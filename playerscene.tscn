@@ -95,5 +95,4 @@ anims/RESET = SubResource( 4 )
 anims/Run = SubResource( 5 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PoolVector2Array( -24, -2, 13, -2, 23, 32, 24, 95, 21, 114, 16, 114, -32, 114, -35, 96, -33, 30 )
+polygon = PoolVector2Array( -24, -2, 13, -2, 25, 30, 25, 114, -35, 114, -35, 96, -35, 31 )

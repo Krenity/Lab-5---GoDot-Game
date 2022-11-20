@@ -27,11 +27,11 @@ func _physics_process(delta):
 		playerdirection = 1
 	if not is_on_floor():
 		if is_on_wall() and playerdirection == 0 and bouncemax == 1:
-			motion.x = playerspeed
+			motion.x = playerspeed / 1.2
 			motion.y = -200
 			bouncemax = 0
 		if is_on_wall() and playerdirection == 1 and bouncemax == 1:
-			motion.x = -playerspeed
+			motion.x = -playerspeed / 1.2
 			motion.y = -200
 			bouncemax = 0
 	if not is_on_floor():
