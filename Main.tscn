@@ -923,7 +923,7 @@ tile_data = PoolIntArray( -12779544, 6, 25, -12779543, 6, 26, -12779542, 6, 26, 
 [node name="Particles2" type="Area2D" parent="Level3"]
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Level3/Particles2"]
-position = Vector2( 208, -11740 )
+position = Vector2( 246, -11038 )
 rotation = -0.261799
 amount = 1000
 lifetime = 9.68
@@ -939,7 +939,7 @@ radial_accel = 0.32
 scale_amount_curve = SubResource( 37 )
 
 [node name="CPUParticles2D3" type="CPUParticles2D" parent="Level3/Particles2"]
-position = Vector2( -1749, -12404 )
+position = Vector2( -1711, -11702 )
 rotation = 0.261799
 amount = 1000
 lifetime = 9.68
