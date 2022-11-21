@@ -67,7 +67,7 @@ polygon = PoolVector2Array( -1392.41, -7532.98, -864.039, -7533.02, -866.034, -7
 
 [sub_resource type="Curve" id=37]
 max_value = 6.8
-_data = [ Vector2( 0.0151515, 6.8 ), 0.0, 0.0, 0, 0, Vector2( 0.969697, 0.85517 ), 0.0, 0.0, 0, 0 ]
+_data = [ Vector2( 0.0151515, 6.8 ), 0.0, 0.0, 0, 0, Vector2( 0.94697, 4.63636 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="TileSet" id=32]
 0/name = "main_lev_build.png 0"
