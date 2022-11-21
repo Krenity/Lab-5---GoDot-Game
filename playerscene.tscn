@@ -98,7 +98,7 @@ anims/RESET = SubResource( 4 )
 anims/Run = SubResource( 5 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -24, -2, 13, -2, 25, 30, 25, 114, -35, 114, -35, 96, -35, 31 )
+polygon = PoolVector2Array( -24, -2, 13, -2, 25, 30, 25, 98, 17, 114, -27, 114, -35, 96, -35, 31 )
 
 [node name="hit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
