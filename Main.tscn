@@ -1761,7 +1761,7 @@ limit_smoothed = true
 drag_margin_v_enabled = true
 smoothing_speed = 3.346
 
-[node name="dirts" type="TileMap" parent="."]
+[node name="Platforms" type="TileMap" parent="."]
 scale = Vector2( 3, 3 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
