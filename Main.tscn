@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -49,7 +49,6 @@
 [ext_resource path="res://Assets/Images/Screenshot 2022-11-20 203629.png" type="Texture" id=47]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (56).png" type="Texture" id=48]
 [ext_resource path="res://Assets/Images/other_and_decorative.png" type="Texture" id=49]
-[ext_resource path="res://coin.tscn" type="PackedScene" id=50]
 [ext_resource path="res://Assets/font.ttf" type="DynamicFontData" id=51]
 
 [sub_resource type="Curve" id=28]
@@ -1783,7 +1782,7 @@ texture = ExtResource( 26 )
 occluder = SubResource( 31 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1090, -9385 )
+position = Vector2( -868.633, 508.722 )
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
 current = true
@@ -2508,126 +2507,6 @@ scale_amount = 3.87
 scale_amount_random = 0.05
 color_initial_ramp = SubResource( 33 )
 
-[node name="Food" parent="." instance=ExtResource( 50 )]
-position = Vector2( -298, 258 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food2" parent="." instance=ExtResource( 50 )]
-position = Vector2( -800, 33 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food2"]
-position = Vector2( -1.44775, 0.645149 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food3" parent="." instance=ExtResource( 50 )]
-position = Vector2( -1142, -151 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food3"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food4" parent="." instance=ExtResource( 50 )]
-position = Vector2( -526, -368 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food4"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food5" parent="." instance=ExtResource( 50 )]
-position = Vector2( -104, -436 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food5"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food6" parent="." instance=ExtResource( 50 )]
-position = Vector2( -303, -863 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food6"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food7" parent="." instance=ExtResource( 50 )]
-position = Vector2( -393, -1571 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food7"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food8" parent="." instance=ExtResource( 50 )]
-position = Vector2( -1238, -1539 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food8"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food9" parent="." instance=ExtResource( 50 )]
-position = Vector2( -481, -2301 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food9"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food10" parent="." instance=ExtResource( 50 )]
-position = Vector2( -432, -2872 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food10"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food12" parent="." instance=ExtResource( 50 )]
-position = Vector2( -695, -3253 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food12"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
-[node name="Food13" parent="." instance=ExtResource( 50 )]
-position = Vector2( -110, -3884 )
-scale = Vector2( 2.76316, 3.1 )
-
-[node name="Light2D" type="Light2D" parent="Food13"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.427451, 0.815686, 0.866667, 1 )
-
 [node name="shop ui" type="Area2D" parent="."]
 
 [node name="Panel" type="Panel" parent="shop ui"]
@@ -2642,33 +2521,11 @@ margin_top = 125.0
 margin_right = 114.0
 margin_bottom = 212.0
 
-[node name="Food11" parent="shop ui/Panel/Item1" instance=ExtResource( 50 )]
-position = Vector2( 46, 40.9998 )
-scale = Vector2( 2.76316, 3.1 )
-region_rect = Rect2( 596.349, 497.098, 14.1608, 23.4265 )
-
-[node name="Light2D" type="Light2D" parent="shop ui/Panel/Item1/Food11"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.533333, 0.101961, 0.305882, 1 )
-
 [node name="Item2" type="Button" parent="shop ui/Panel"]
 margin_left = 159.0
 margin_top = 125.0
 margin_right = 254.0
 margin_bottom = 212.0
-
-[node name="Food13" parent="shop ui/Panel/Item2" instance=ExtResource( 50 )]
-position = Vector2( 43, 43 )
-scale = Vector2( 2.76316, 3.1 )
-region_rect = Rect2( 571.166, 523.834, 21.9747, 23.2053 )
-
-[node name="Light2D" type="Light2D" parent="shop ui/Panel/Item2/Food13"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.431373, 0.701961, 0.160784, 1 )
 
 [node name="Item3" type="Button" parent="shop ui/Panel"]
 margin_left = 299.0
@@ -2676,35 +2533,13 @@ margin_top = 125.0
 margin_right = 394.0
 margin_bottom = 212.0
 
-[node name="Food12" parent="shop ui/Panel/Item3" instance=ExtResource( 50 )]
-position = Vector2( 47, 44 )
-scale = Vector2( 2.76316, 3.1 )
-region_rect = Rect2( 493.288, 529.46, 16.7007, 17.4039 )
-
-[node name="Light2D" type="Light2D" parent="shop ui/Panel/Item3/Food12"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.313726, 0, 1, 1 )
-
 [node name="Item4" type="Button" parent="shop ui/Panel"]
 margin_left = 436.0
 margin_top = 125.0
 margin_right = 531.0
 margin_bottom = 212.0
 
-[node name="Food14" parent="shop ui/Panel/Item4" instance=ExtResource( 50 )]
-position = Vector2( 44, 41 )
-scale = Vector2( 2.76316, 3.1 )
-region_rect = Rect2( 50.2608, 652.003, 30.8089, 25.0872 )
-
-[node name="Light2D" type="Light2D" parent="shop ui/Panel/Item4/Food14"]
-position = Vector2( -0.361816, 0 )
-scale = Vector2( 0.117396, 0.130712 )
-texture = SubResource( 26 )
-color = Color( 0.968627, 0.0235294, 0.0235294, 1 )
-
-[node name="Label" type="Label" parent="shop ui/Panel"]
+[node name="Label Text" type="Label" parent="shop ui/Panel"]
 margin_left = 7.0
 margin_top = 8.0
 margin_right = 530.0
@@ -2715,7 +2550,7 @@ custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Potions Obtained:"
 
-[node name="Label2" type="Label" parent="shop ui/Panel"]
+[node name="Label2 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 3.0
 margin_top = 103.0
 margin_right = 264.0
@@ -2726,7 +2561,7 @@ custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Potions: "
 
-[node name="Label6" type="Label" parent="shop ui/Panel"]
+[node name="Label6 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 16.0
 margin_top = 215.0
 margin_right = 417.0
@@ -2737,7 +2572,7 @@ custom_colors/font_color = Color( 0.945098, 0.572549, 0.572549, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Unusual Cola"
 
-[node name="Label7" type="Label" parent="shop ui/Panel"]
+[node name="Label7 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 164.0
 margin_top = 214.0
 margin_right = 565.0
@@ -2748,7 +2583,7 @@ custom_colors/font_color = Color( 0.447059, 0.552941, 0.427451, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Grey Slurp"
 
-[node name="Label8" type="Label" parent="shop ui/Panel"]
+[node name="Label8 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 294.0
 margin_top = 215.0
 margin_right = 695.0
@@ -2759,7 +2594,7 @@ custom_colors/font_color = Color( 0.694118, 0.32549, 0.733333, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Magical Coco"
 
-[node name="Label9" type="Label" parent="shop ui/Panel"]
+[node name="Label9 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 415.0
 margin_top = 215.0
 margin_right = 938.0
@@ -2770,7 +2605,7 @@ custom_colors/font_color = Color( 0.854902, 0.219608, 0.219608, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Mystirious Candy"
 
-[node name="Label3" type="Label" parent="shop ui/Panel"]
+[node name="Label3 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 151.0
 margin_top = 103.0
 margin_right = 412.0
@@ -2781,7 +2616,7 @@ custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Potions: "
 
-[node name="Label4" type="Label" parent="shop ui/Panel"]
+[node name="Label4 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 290.0
 margin_top = 103.0
 margin_right = 551.0
@@ -2792,7 +2627,7 @@ custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Potions: "
 
-[node name="Label5" type="Label" parent="shop ui/Panel"]
+[node name="Label5 Text" type="Label" parent="shop ui/Panel"]
 margin_left = 427.0
 margin_top = 103.0
 margin_right = 688.0
