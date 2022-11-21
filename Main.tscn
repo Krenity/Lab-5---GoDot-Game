@@ -920,8 +920,8 @@ orbit_velocity_random = 1.0
 scale_amount_curve = SubResource( 37 )
 
 [node name="Pixil-frame-0(56)" type="Sprite" parent="Particles2"]
-position = Vector2( -185.969, -6609.67 )
-scale = Vector2( 0.830483, 0.602875 )
+position = Vector2( -182.866, -6610.05 )
+scale = Vector2( 0.818233, 0.656025 )
 texture = ExtResource( 48 )
 offset = Vector2( -96.667, -342.889 )
 
@@ -932,8 +932,8 @@ texture = ExtResource( 48 )
 offset = Vector2( -96.667, -342.889 )
 
 [node name="Pixil-frame-0(56)2" type="Sprite" parent="Particles2"]
-position = Vector2( -1067.45, -6601.81 )
-scale = Vector2( 0.830483, 0.602875 )
+position = Vector2( -1067.45, -6602.27 )
+scale = Vector2( 0.830483, 0.667253 )
 texture = ExtResource( 48 )
 offset = Vector2( -96.667, -342.889 )
 
@@ -1751,7 +1751,7 @@ texture = ExtResource( 26 )
 occluder = SubResource( 31 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -438.53, -7186.6 )
+position = Vector2( -354.923, -7186.6 )
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
 current = true

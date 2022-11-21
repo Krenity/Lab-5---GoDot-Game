@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://playerscript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/Fullmain.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Audio/bounce.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Audio/jump.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Audio/land.wav" type="AudioStream" id=5]
 
 [sub_resource type="OccluderPolygon2D" id=6]
 polygon = PoolVector2Array( -5, 58, -11, -58, 3, -58, 1, 58 )
@@ -96,3 +99,12 @@ anims/Run = SubResource( 5 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -24, -2, 13, -2, 25, 30, 25, 114, -35, 114, -35, 96, -35, 31 )
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="land" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )

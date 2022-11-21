@@ -5,6 +5,7 @@ var jumping = false
 var bouncemax = 1
 onready var animation = $AnimationPlayer
 var playerdirection = 0
+var fallen = false
 const gravity = 9
 const maxgravity = 1000
 const playerspeed = 150
@@ -12,7 +13,6 @@ const UP = Vector2(0, -1)
 var motion = Vector2()
 func _ready():
 	pass
-
 
 
 func _physics_process(delta):
@@ -27,13 +27,21 @@ func _physics_process(delta):
 		playerdirection = 1
 	if not is_on_floor():
 		if is_on_wall() and playerdirection == 0 and bouncemax == 1:
+			$hit.play()
 			motion.x = playerspeed / 1.2
 			motion.y = -200
 			bouncemax = 0
+			fallen = true
+			$land.stop()
 		if is_on_wall() and playerdirection == 1 and bouncemax == 1:
+			$hit.play()
 			motion.x = -playerspeed / 1.2
 			motion.y = -200
 			bouncemax = 0
+			fallen = true
+			$land.stop()
+	if fallen == true and is_on_floor():
+		$land.play()
 	if not is_on_floor():
 		print("true")
 		Input.action_release("move_right")
@@ -46,6 +54,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("move_down"):
 			jumpheight += -5
 		if Input.is_action_just_released("move_down"):
+			$Jump.play()
 			if jumpheight < maxjump:
 				motion.y = maxjump
 				jumpheight = -100
@@ -74,6 +83,7 @@ func _physics_process(delta):
 			motion.y = 5
 		if is_on_floor() and jumping == false:
 			if is_on_floor():
+				fallen = false
 				animation.play("Idle")
 			motion.x = 0
 			bouncemax = 1
