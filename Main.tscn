@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -49,7 +49,6 @@
 [ext_resource path="res://Assets/Images/Screenshot 2022-11-20 203629.png" type="Texture" id=47]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (56).png" type="Texture" id=48]
 [ext_resource path="res://Assets/Images/other_and_decorative.png" type="Texture" id=49]
-[ext_resource path="res://coin.tscn" type="PackedScene" id=50]
 
 [sub_resource type="Curve" id=28]
 max_value = 29.84
@@ -1187,7 +1186,7 @@ scale = Vector2( 2.90573, 2.90573 )
 texture = ExtResource( 20 )
 
 [node name="Light" type="Sprite" parent="Level1/Backrounds"]
-position = Vector2( -526, 144 )
+position = Vector2( -524.494, 144.134 )
 scale = Vector2( 2.90573, 2.90573 )
 texture = ExtResource( 23 )
 
@@ -1752,14 +1751,9 @@ texture = ExtResource( 26 )
 occluder = SubResource( 31 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-<<<<<<< HEAD
-position = Vector2( -869, 399 )
-=======
 position = Vector2( -354.923, -7186.6 )
->>>>>>> 1d214c96b23f33e0cb0fd5abb1a88ee9d289f381
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
-position = Vector2( 0, 62 )
 current = true
 limit_left = 1
 limit_right = 0
@@ -2439,15 +2433,3 @@ angle_random = 0.27
 scale_amount = 3.87
 scale_amount_random = 0.05
 color_initial_ramp = SubResource( 33 )
-
-[node name="Food" parent="." instance=ExtResource( 50 )]
-position = Vector2( -1071, 399 )
-scale = Vector2( 3.74378, 3.76003 )
-offset = Vector2( 128.213, -4.25529 )
-
-[node name="Light2D" type="Light2D" parent="Food"]
-position = Vector2( 0.215318, 1.19782 )
-scale = Vector2( 0.0897127, 0.103923 )
-texture = SubResource( 26 )
-offset = Vector2( 20, -30 )
-color = Color( 0.260834, 0.753496, 0.867188, 1 )
