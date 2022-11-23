@@ -996,39 +996,6 @@ tile_data = PoolIntArray( -10289180, 40, 0, -10289173, 40, 0, -10289163, 40, 0, 
 
 [node name="Decorations" type="Area2D" parent="Level2"]
 
-[node name="ShopAnim" type="Sprite" parent="Level2/Decorations"]
-position = Vector2( -1029.55, -4043.23 )
-scale = Vector2( 3.2435, 3.2435 )
-texture = ExtResource( 14 )
-hframes = 6
-script = ExtResource( 15 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Level2/Decorations/ShopAnim"]
-"anims/New Anim" = SubResource( 24 )
-anims/RESET = SubResource( 25 )
-
-[node name="Light2D3" type="Light2D" parent="Level2/Decorations/ShopAnim"]
-position = Vector2( 49.3681, 34.5088 )
-rotation = -0.0163805
-scale = Vector2( 0.123083, 0.123857 )
-texture = SubResource( 26 )
-offset = Vector2( 56.174, -48.4448 )
-color = Color( 0.74902, 0.752941, 0.231373, 1 )
-energy = 0.86
-shadow_enabled = true
-shadow_color = Color( 1, 1, 1, 0 )
-
-[node name="Light2D2" type="Light2D" parent="Level2/Decorations/ShopAnim"]
-position = Vector2( -48.5422, 33.3918 )
-rotation = -0.00819027
-scale = Vector2( 0.105245, 0.105245 )
-texture = ExtResource( 13 )
-offset = Vector2( 56.174, -48.4448 )
-color = Color( 0.74902, 0.752941, 0.231373, 1 )
-energy = 0.86
-shadow_enabled = true
-shadow_color = Color( 1, 1, 1, 0 )
-
 [node name="OtherAndDecorative" type="Sprite" parent="Level2/Decorations"]
 position = Vector2( -543.696, -6988.52 )
 scale = Vector2( 1.90553, 1.90553 )
@@ -1196,6 +1163,42 @@ scale = Vector2( 2.4129, 2.05478 )
 texture = ExtResource( 49 )
 region_enabled = true
 region_rect = Rect2( 234.684, 118.475, 29.3858, 16.94 )
+
+[node name="ShopAnim" type="Sprite" parent="Level2/Decorations"]
+position = Vector2( -1029.55, -4043.23 )
+scale = Vector2( 3.2435, 3.2435 )
+texture = ExtResource( 14 )
+hframes = 6
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level2/Decorations/ShopAnim"]
+"anims/New Anim" = SubResource( 24 )
+anims/RESET = SubResource( 25 )
+
+[node name="Light2D3" type="Light2D" parent="Level2/Decorations/ShopAnim"]
+position = Vector2( 49.3681, 34.5088 )
+rotation = -0.0163805
+scale = Vector2( 0.123083, 0.123857 )
+texture = SubResource( 26 )
+offset = Vector2( 56.174, -48.4448 )
+color = Color( 0.74902, 0.752941, 0.231373, 1 )
+energy = 0.86
+shadow_enabled = true
+shadow_color = Color( 1, 1, 1, 0 )
+
+[node name="Light2D2" type="Light2D" parent="Level2/Decorations/ShopAnim"]
+position = Vector2( -48.5422, 33.3918 )
+rotation = -0.00819027
+scale = Vector2( 0.105245, 0.105245 )
+texture = ExtResource( 13 )
+offset = Vector2( 56.174, -48.4448 )
+color = Color( 0.74902, 0.752941, 0.231373, 1 )
+energy = 0.86
+shadow_enabled = true
+shadow_color = Color( 1, 1, 1, 0 )
 
 [node name="Level1" type="Area2D" parent="."]
 
@@ -1783,6 +1786,9 @@ occluder = SubResource( 31 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -868.633, 508.722 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
 current = true
@@ -2508,6 +2514,9 @@ scale_amount_random = 0.05
 color_initial_ramp = SubResource( 33 )
 
 [node name="shop ui" type="Area2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Panel" type="Panel" parent="shop ui"]
 margin_left = -2100.0
