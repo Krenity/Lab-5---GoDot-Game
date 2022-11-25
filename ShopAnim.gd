@@ -1,6 +1,6 @@
 extends Sprite
 
-onready var animation = $AnimationPlayer
+onready var animation = $Area2D/AnimationPlayer
 
 func _ready():
 	pass
