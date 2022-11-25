@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Images/FOOD.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Images/gamma.jpg" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,3 +14,9 @@ region_rect = Rect2( 567.666, 472.597, 26.1254, 23.3591 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.141176, 0.85098, 0.866667, 1 )
+energy = 0.7
