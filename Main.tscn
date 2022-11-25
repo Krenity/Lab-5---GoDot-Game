@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -49,7 +49,10 @@
 [ext_resource path="res://Assets/Images/Screenshot 2022-11-20 203629.png" type="Texture" id=47]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (56).png" type="Texture" id=48]
 [ext_resource path="res://Assets/Images/other_and_decorative.png" type="Texture" id=49]
+[ext_resource path="res://Flask.tscn" type="PackedScene" id=50]
 [ext_resource path="res://Assets/font.ttf" type="DynamicFontData" id=51]
+[ext_resource path="res://Flask.gd" type="Script" id=52]
+[ext_resource path="res://FlaskAmount.gd" type="Script" id=53]
 
 [sub_resource type="Curve" id=28]
 max_value = 29.84
@@ -636,6 +639,10 @@ colors = PoolColorArray( 1, 1, 1, 1, 1, 0.92218, 0.0625, 1, 1, 0, 0, 1, 0.194824
 
 [sub_resource type="OccluderPolygon2D" id=31]
 polygon = PoolVector2Array( -1052.7, -1724.95, -1052.96, -1676.74, -1100.91, -1677.14, -1100.91, -1580.45, -1148.98, -1580.98, -1149.12, -1532.24, -1196.32, -1531.39, -1197.73, -1484.72, -962.97, -1486.14, -963.178, -1634.88, -915.062, -1635.45, -915.062, -1725.29 )
+
+[sub_resource type="DynamicFont" id=40]
+size = 18
+font_data = ExtResource( 51 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 151.529, 79.5833 )
@@ -1291,7 +1298,7 @@ hframes = 4
 frame = 3
 
 [node name="Pixil-frame-0(50)" type="Sprite" parent="Level1"]
-position = Vector2( -723.476, -2385.38 )
+position = Vector2( -719, -2760 )
 scale = Vector2( 2.16644, 2.69325 )
 texture = ExtResource( 28 )
 
@@ -1789,6 +1796,14 @@ position = Vector2( -868.633, 508.722 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Label" type="Label" parent="player"]
+margin_left = 37.633
+margin_top = -0.721985
+margin_right = 202.633
+margin_bottom = 38.278
+custom_fonts/font = SubResource( 40 )
+script = ExtResource( 53 )
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
 current = true
@@ -2646,3 +2661,11 @@ theme = SubResource( 38 )
 custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Potions: "
+
+[node name="Flask" parent="." instance=ExtResource( 50 )]
+position = Vector2( -740, 559 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[connection signal="body_entered" from="Flask" to="Flask" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Flask" to="player/Label" method="_on_Area2D_test"]

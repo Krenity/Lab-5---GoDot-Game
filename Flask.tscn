@@ -4,14 +4,12 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="Flask" type="Area2D"]
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 567.666, 472.597, 26.1254, 23.3591 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 4.76837e-07, 4.76837e-07 )
-scale = Vector2( 1.01464, 1.00929 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 572.101, 474.251, 18.7488, 20.5929 )
