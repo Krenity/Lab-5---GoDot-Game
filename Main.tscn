@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=90 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Assets/Decorations/jack_o_lantern_3.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Images/gamma.jpg" type="Texture" id=13]
 [ext_resource path="res://Shop.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Shop Detection.gd" type="Script" id=15]
 [ext_resource path="res://Assets/Decorations/DownLayer.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Decorations/Plant.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Decorations/Rock.png" type="Texture" id=18]
@@ -52,6 +53,8 @@
 [ext_resource path="res://Assets/font.ttf" type="DynamicFontData" id=51]
 [ext_resource path="res://Flask.gd" type="Script" id=52]
 [ext_resource path="res://FlaskAmount.gd" type="Script" id=53]
+[ext_resource path="res://shop ui.gd" type="Script" id=54]
+[ext_resource path="res://Assets/Borders/border_01.png" type="Texture" id=55]
 
 [sub_resource type="Curve" id=28]
 max_value = 29.84
@@ -637,11 +640,16 @@ extents = Vector2( 47.9315, 16.0311 )
 [sub_resource type="Gradient" id=33]
 colors = PoolColorArray( 0.0916138, 0.617188, 0.149098, 1, 0.110363, 0.21875, 0.0495605, 1 )
 
+[sub_resource type="StyleBoxEmpty" id=42]
+
 [sub_resource type="Theme" id=38]
 
 [sub_resource type="DynamicFont" id=39]
 size = 61
 font_data = ExtResource( 51 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 184.5, 154.5 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -1723,7 +1731,11 @@ texture = ExtResource( 26 )
 occluder = SubResource( 31 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
+<<<<<<< HEAD
 position = Vector2( -182, -5219 )
+=======
+position = Vector2( -378, -4013 )
+>>>>>>> 81ce93da1e0285ed3f3f259d94a76e86d0bcf061
 __meta__ = {
 "_edit_group_": true
 }
@@ -2478,7 +2490,9 @@ scale_amount_random = 0.05
 color_initial_ramp = SubResource( 33 )
 
 [node name="shop ui" type="Area2D" parent="."]
-position = Vector2( 1360, -74 )
+position = Vector2( 903, -853 )
+scale = Vector2( 0.818037, 0.818037 )
+script = ExtResource( 54 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -2488,136 +2502,94 @@ margin_left = -2100.0
 margin_top = -4141.0
 margin_right = -1551.0
 margin_bottom = -3904.0
+custom_styles/panel = SubResource( 42 )
 
-[node name="Item1" type="Button" parent="shop ui/Panel"]
-margin_left = 19.0
-margin_top = 125.0
-margin_right = 114.0
-margin_bottom = 212.0
+[node name="Border01" type="Sprite" parent="shop ui/Panel"]
+position = Vector2( 39.875, 181.5 )
+scale = Vector2( 5.83696, 6.06521 )
+texture = ExtResource( 55 )
+hframes = 2
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Item2" type="Button" parent="shop ui/Panel"]
-margin_left = 159.0
-margin_top = 125.0
-margin_right = 254.0
-margin_bottom = 212.0
+[node name="Border02" type="Sprite" parent="shop ui/Panel/Border01"]
+position = Vector2( 82.5987, 0 )
+texture = ExtResource( 55 )
+hframes = 2
+frame = 1
 
-[node name="Item3" type="Button" parent="shop ui/Panel"]
-margin_left = 299.0
-margin_top = 125.0
-margin_right = 394.0
-margin_bottom = 212.0
-
-[node name="Item4" type="Button" parent="shop ui/Panel"]
-margin_left = 436.0
-margin_top = 125.0
-margin_right = 531.0
-margin_bottom = 212.0
-
-[node name="Label Text" type="Label" parent="shop ui/Panel"]
-margin_left = 7.0
-margin_top = 8.0
-margin_right = 530.0
-margin_bottom = 77.0
-rect_scale = Vector2( 0.616487, 0.702882 )
-theme = SubResource( 38 )
-custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-text = "Potions Obtained:"
+[node name="Border03" type="Sprite" parent="shop ui/Panel/Border01"]
+position = Vector2( 41.3101, 0 )
+scale = Vector2( 3.88751, 1 )
+texture = ExtResource( 55 )
+hframes = 3
+frame = 1
 
 [node name="Label2 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 3.0
-margin_top = 103.0
-margin_right = 264.0
-margin_bottom = 164.0
+margin_left = 234.0
+margin_top = 91.0
+margin_right = 531.0
+margin_bottom = 152.0
 rect_scale = Vector2( 0.252424, 0.320724 )
 theme = SubResource( 38 )
 custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
-text = "Potions: "
+text = "Upgrades"
 
-[node name="Label6 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 16.0
-margin_top = 215.0
-margin_right = 417.0
-margin_bottom = 276.0
+[node name="Item1" type="Button" parent="shop ui/Panel"]
+margin_left = 58.0
+margin_top = 123.0
+margin_right = 142.0
+margin_bottom = 207.0
+rect_scale = Vector2( 1.5301, 1.5301 )
+
+[node name="Label6 Text" type="Label" parent="shop ui/Panel/Item1"]
+margin_left = -3.0
+margin_top = 90.0
+margin_right = 398.0
+margin_bottom = 151.0
 rect_scale = Vector2( 0.252424, 0.320724 )
 theme = SubResource( 38 )
 custom_colors/font_color = Color( 0.945098, 0.572549, 0.572549, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Unusual Cola"
 
-[node name="Label7 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 164.0
-margin_top = 214.0
-margin_right = 565.0
-margin_bottom = 275.0
+[node name="Item2" type="Button" parent="shop ui/Panel"]
+margin_left = 370.0
+margin_top = 123.0
+margin_right = 454.0
+margin_bottom = 207.0
+rect_scale = Vector2( 1.53, 1.53 )
+
+[node name="Label7 Text" type="Label" parent="shop ui/Panel/Item2"]
+margin_left = 5.0
+margin_top = 89.0
+margin_right = 406.0
+margin_bottom = 150.0
 rect_scale = Vector2( 0.252424, 0.320724 )
 theme = SubResource( 38 )
 custom_colors/font_color = Color( 0.447059, 0.552941, 0.427451, 1 )
 custom_fonts/font = SubResource( 39 )
 text = "Grey Slurp"
 
-[node name="Label8 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 294.0
-margin_top = 215.0
-margin_right = 695.0
-margin_bottom = 276.0
-rect_scale = Vector2( 0.252424, 0.320724 )
-theme = SubResource( 38 )
-custom_colors/font_color = Color( 0.694118, 0.32549, 0.733333, 1 )
-custom_fonts/font = SubResource( 39 )
-text = "Magical Coco"
+[node name="Shop Detection" type="Area2D" parent="."]
+script = ExtResource( 15 )
 
-[node name="Label9 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 415.0
-margin_top = 215.0
-margin_right = 938.0
-margin_bottom = 276.0
-rect_scale = Vector2( 0.252424, 0.320724 )
-theme = SubResource( 38 )
-custom_colors/font_color = Color( 0.854902, 0.219608, 0.219608, 1 )
-custom_fonts/font = SubResource( 39 )
-text = "Mystirious Candy"
-
-[node name="Label3 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 151.0
-margin_top = 103.0
-margin_right = 412.0
-margin_bottom = 164.0
-rect_scale = Vector2( 0.252424, 0.320724 )
-theme = SubResource( 38 )
-custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-text = "Potions: "
-
-[node name="Label4 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 290.0
-margin_top = 103.0
-margin_right = 551.0
-margin_bottom = 164.0
-rect_scale = Vector2( 0.252424, 0.320724 )
-theme = SubResource( 38 )
-custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-text = "Potions: "
-
-[node name="Label5 Text" type="Label" parent="shop ui/Panel"]
-margin_left = 427.0
-margin_top = 103.0
-margin_right = 688.0
-margin_bottom = 164.0
-rect_scale = Vector2( 0.252424, 0.320724 )
-theme = SubResource( 38 )
-custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
-custom_fonts/font = SubResource( 39 )
-text = "Potions: "
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shop Detection"]
+position = Vector2( -1036.5, -3996.5 )
+shape = SubResource( 41 )
 
 [node name="AllFlasks" type="Area2D" parent="."]
 
 [node name="Flask" parent="AllFlasks" instance=ExtResource( 50 )]
-position = Vector2( -709, 548 )
+position = Vector2( -559, -3895 )
 scale = Vector2( 2.24, 2.24 )
 script = ExtResource( 52 )
 
+[connection signal="ShopNeedsClosing" from="Shop Detection" to="shop ui" method="_on_Shop_Detection_ShopNeedsClosing"]
+[connection signal="ShopNeedsopening" from="Shop Detection" to="shop ui" method="_on_Shop_Detection_ShopNeedsopening"]
+[connection signal="body_entered" from="Shop Detection" to="Shop Detection" method="_on_Shop_Detection_body_entered"]
+[connection signal="body_exited" from="Shop Detection" to="Shop Detection" method="_on_Shop_Detection_body_exited"]
 [connection signal="body_entered" from="AllFlasks/Flask" to="AllFlasks/Flask" method="_on_Area2D_body_entered"]
 [connection signal="test" from="AllFlasks/Flask" to="player/Label" method="_on_Area2D_test"]
