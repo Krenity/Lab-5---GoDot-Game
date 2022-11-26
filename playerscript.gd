@@ -146,3 +146,8 @@ func _on_Item1_shopitem1buy():
 func _on_Item2_shopitem2buy():
 	if count >= 50:
 		$Label.text = str(count - 50)
+
+
+func _on_Ending_upgradeshide():
+	Input.action_press("cheatsenable")
+	get_node("ChargeBar").hide()
