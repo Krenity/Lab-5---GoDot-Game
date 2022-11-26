@@ -1741,7 +1741,7 @@ texture = ExtResource( 26 )
 occluder = SubResource( 31 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -870.147, -7230.56 )
+position = Vector2( -354.924, -2991.06 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -2781,7 +2781,113 @@ shape = SubResource( 41 )
 [node name="AllFlasks" type="Area2D" parent="."]
 
 [node name="Flask" parent="AllFlasks" instance=ExtResource( 50 )]
-position = Vector2( -569.796, -3895 )
+position = Vector2( -292.712, 349.058 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask13" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1315.08, -4191.16 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask14" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1153.93, -4417.34 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask15" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1153.93, -4609.59 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask16" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -594.145, -4996.92 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask17" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -119.175, -5333.35 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask18" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -695.924, -5553.88 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask2" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -803.977, 36.2445 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask3" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -181.038, -424.567 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask4" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -840, -855.119 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask5" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -369.098, -1215.02 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask12" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -581.138, -1842.66 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask6" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -921.6, -1575.51 )
+rotation = 0.00504303
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask7" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -145.593, -2029.01 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask8" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -595.434, -2356.01 )
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask9" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1323.62, -2387.76 )
+rotation = -0.00587433
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask10" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -697.405, -3273.27 )
+rotation = 0.00143378
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask19" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1034.04, -3012.14 )
+rotation = 0.00143378
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask20" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1196.87, -1830.28 )
+rotation = 0.00143378
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask21" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1319.67, -551.504 )
+rotation = 0.00143378
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+
+[node name="Flask11" parent="AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -667.514, -3879.71 )
 scale = Vector2( 2.24, 2.24 )
 script = ExtResource( 52 )
 
@@ -2808,3 +2914,43 @@ script = ExtResource( 52 )
 [connection signal="body_exited" from="Shop Detection" to="Shop Detection" method="_on_Shop_Detection_body_exited"]
 [connection signal="body_entered" from="AllFlasks/Flask" to="AllFlasks/Flask" method="_on_Area2D_body_entered"]
 [connection signal="test" from="AllFlasks/Flask" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask13" to="AllFlasks/Flask13" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask13" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask14" to="AllFlasks/Flask14" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask14" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask15" to="AllFlasks/Flask15" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask15" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask16" to="AllFlasks/Flask16" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask16" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask17" to="AllFlasks/Flask17" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask17" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask18" to="AllFlasks/Flask18" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask18" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask2" to="AllFlasks/Flask2" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask2" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask3" to="AllFlasks/Flask3" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask3" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask4" to="AllFlasks/Flask4" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask4" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask5" to="AllFlasks/Flask5" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask5" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask12" to="AllFlasks/Flask12" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask12" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask6" to="AllFlasks/Flask6" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask6" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask7" to="AllFlasks/Flask7" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask7" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask8" to="AllFlasks/Flask8" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask8" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask9" to="AllFlasks/Flask9" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask9" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask10" to="AllFlasks/Flask10" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask10" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask19" to="AllFlasks/Flask19" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask19" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask20" to="AllFlasks/Flask20" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask20" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask21" to="AllFlasks/Flask21" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask21" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="AllFlasks/Flask11" to="AllFlasks/Flask11" method="_on_Area2D_body_entered"]
+[connection signal="test" from="AllFlasks/Flask11" to="player/Label" method="_on_Area2D_test"]

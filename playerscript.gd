@@ -104,11 +104,13 @@ func _physics_process(_delta):
 
 func _on_Label_flaskrecived():
 	count += 1
+	$Flask.play()
 
 
 func _on_Item1_shopitem1buy():
 	if count >= 10:
 		$Label.text = str(count - 10)
+		count = count - 10
 		get_node("ChargeBar").show()
 
 
