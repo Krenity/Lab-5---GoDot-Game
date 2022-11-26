@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -78,6 +78,9 @@ _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="OccluderPolygon2D" id=36]
 polygon = PoolVector2Array( -1392.41, -7532.98, -864.039, -7533.02, -866.034, -7439.62, -953.746, -7389.96, -480.321, -7392.48, -525.275, -7435.53, -576.237, -7436.89, -575.936, -7533.06, -96.0292, -7532.98, -96.5998, -7437.19, -188.669, -7388.78, -41.0407, -7387.19, -35.4143, -7373.94, -31.8464, -7290.41, -1399.61, -7296.77, -1396.68, -7387.98, -1337.1, -7387.88, -1341.12, -7436.4, -1390.33, -7437.19 )
+
+[sub_resource type="OccluderPolygon2D" id=45]
+polygon = PoolVector2Array( -665.871, -7592.68, -640.615, -7625.23, -464.253, -7626.64, -434.049, -7580.86, -392.518, -7550.18, -404.317, -7505.35, -436.409, -7496.38, -455.642, -7406.8, -462.705, -7397.37, -540.155, -7397.37, -573.268, -7442.83, -612.554, -7463.6, -619.289, -7537.68 )
 
 [sub_resource type="Curve" id=37]
 max_value = 6.8
@@ -855,6 +858,14 @@ scale_amount_curve = SubResource( 28 )
 color_ramp = SubResource( 29 )
 hue_variation_curve = SubResource( 30 )
 
+[node name="Light2D" type="Light2D" parent="Level3/Decorations/CPUParticles2D2"]
+position = Vector2( 328.802, -0.37915 )
+texture = ExtResource( 13 )
+texture_scale = 1.04
+color = Color( 1, 0.960784, 0, 1 )
+shadow_enabled = true
+shadow_filter_smooth = 52.0
+
 [node name="CPUParticles2D3" type="CPUParticles2D" parent="Level3/Decorations"]
 position = Vector2( -1133.61, -7629.77 )
 rotation = 3.14159
@@ -874,7 +885,7 @@ scale_amount_curve = SubResource( 28 )
 color_ramp = SubResource( 29 )
 hue_variation_curve = SubResource( 30 )
 
-[node name="Light2D" type="Light2D" parent="Level3/Decorations/CPUParticles2D3"]
+[node name="Light2D2" type="Light2D" parent="Level3/Decorations/CPUParticles2D3"]
 position = Vector2( -329.584, 1.10107 )
 texture = ExtResource( 13 )
 texture_scale = 1.04
@@ -1093,6 +1104,9 @@ scale = Vector2( 1.80004, 1.80004 )
 texture = ExtResource( 30 )
 region_enabled = true
 region_rect = Rect2( 705.392, -5.45795, 54.0419, 24.5645 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Level3/Decorations"]
+occluder = SubResource( 45 )
 
 [node name="Particles2" type="Area2D" parent="Level3"]
 
@@ -1966,7 +1980,7 @@ scale = Vector2( 1.73036, 1.73036 )
 texture = ExtResource( 10 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1087.9, -3702.64 )
+position = Vector2( -596.661, -7787.02 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -2126,7 +2140,7 @@ polygon = PoolVector2Array( -206.934, -2190.87, -175.821, -2176.21, -15.1482, -2
 polygon = PoolVector2Array( -213, -2541.67, -221.667, -2532, -222, -2523.67, -207.667, -2511.67, -204.667, -2489.33, -180, -2464.67, -154.667, -2466, -147, -2476.33, -145.667, -2496.33, -132.333, -2507, -132, -2517, -155, -2541.67 )
 
 [node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PoolVector2Array( -422, -2463.67, -430.333, -2452.67, -430, -2445.67, -421.667, -2433, -400.333, -2431.33, -373.333, -2403.33, -364.333, -2403.67, -341, -2426.67, -337, -2431.33, -337.667, -2442.33, -339.667, -2457.67, -347.667, -2462.67 )
+polygon = PoolVector2Array( -422, -2463.67, -430, -2445.67, -421.667, -2433, -400.333, -2431.33, -373.333, -2403.33, -364.333, -2403.67, -341, -2426.67, -337, -2431.33, -337.667, -2442.33, -339.667, -2457.67, -347.667, -2462.67 )
 
 [node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PoolVector2Array( -342.087, -2638, -349.333, -2627.67, -348.991, -2617.48, -326.02, -2593.79, -314.118, -2593.9, -304.997, -2606.08, -305, -2627.33, -314.011, -2638.08 )
