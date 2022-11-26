@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lena Raine - One More Day (1 Hour Minecraft 1.18 Music).mp3-4d059f2702a94977b60f24791f554bdb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Lena Raine - One More Day (1 Hour Minecraft 1.18 Music).mp3"
+dest_files=[ "res://.import/Lena Raine - One More Day (1 Hour Minecraft 1.18 Music).mp3-4d059f2702a94977b60f24791f554bdb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
