@@ -9,7 +9,7 @@ func _ready():
 	pass
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("move_right"):
 		animation.play("PressD")
 	else:

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://playerscript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/Fullmain.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/bounce.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Audio/jump.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Audio/land.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Images/FOOD.png" type="Texture" id=6]
 
 [sub_resource type="OccluderPolygon2D" id=6]
 polygon = PoolVector2Array( -5, 58, -11, -58, 3, -58, 1, 58 )
@@ -108,3 +109,11 @@ stream = ExtResource( 4 )
 
 [node name="land" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="flask" type="Sprite" parent="."]
+position = Vector2( 26, 7 )
+rotation = 0.261799
+scale = Vector2( 1.3419, 1.3419 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 569.303, 474.205, 23.4764, 21.0052 )

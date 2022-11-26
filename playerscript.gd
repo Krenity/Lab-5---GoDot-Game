@@ -2,9 +2,11 @@ extends KinematicBody2D
 const maxjump = -400
 var jumpheight = -50
 var jumping = false
+var count = 20
 var bouncemax = 1
 onready var animation = $AnimationPlayer
 var playerdirection = 0
+var x = 1
 var fallen = false
 const gravity = 9
 const maxgravity = 1000
@@ -12,11 +14,11 @@ const playerspeed = 150
 const UP = Vector2(0, -1)
 var motion = Vector2()
 func _ready():
-	pass
+	get_node("ChargeBar").hide()
 
 
-func _physics_process(delta):
-	print(jumpheight, motion)
+func _physics_process(_delta):
+	print(jumpheight, motion, count)
 	if Input.is_action_pressed("move_left"):
 		playerdirection = 0
 		$Sprite.flip_h = true
@@ -52,8 +54,17 @@ func _physics_process(delta):
 		motion.y = maxgravity
 	if is_on_floor():
 		if Input.is_action_pressed("move_down"):
-			jumpheight += -5
+			while x == 1:
+				$ChargeBar.texture = preload("res://Assets/Images/JumpPower/1.png")
+				x = 0
+			jumpheight += -5 
+			if jumpheight == -230:
+				$ChargeBar.texture = preload("res://Assets/Images/JumpPower/2.png")
+			if jumpheight == maxjump:
+				$ChargeBar.texture = preload("res://Assets/Images/JumpPower/3.png")
 		if Input.is_action_just_released("move_down"):
+			x = 1
+			$ChargeBar.texture = preload("res://Assets/Images/JumpPower/0.png")
 			$Jump.play()
 			if jumpheight < maxjump:
 				motion.y = maxjump
@@ -90,3 +101,17 @@ func _physics_process(delta):
 		jumping = false
 	motion = move_and_slide(motion, UP)
 	Engine.time_scale = 3
+
+func _on_Label_flaskrecived():
+	count += 1
+
+
+func _on_Item1_shopitem1buy():
+	if count >= 10:
+		$Label.text = str(count - 10)
+		get_node("ChargeBar").show()
+
+
+func _on_Item2_shopitem2buy():
+	if count >= 50:
+		$Label.text = str(count - 50)
