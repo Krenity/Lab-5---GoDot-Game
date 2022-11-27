@@ -2,9 +2,10 @@ extends KinematicBody2D
 const maxjump = -400
 var jumpheight = -50
 var jumping = false
-var count = 20
+var count = 0
 var cheats = false
 var bouncemax = 1
+var gravityoff = false
 onready var animation = $AnimationPlayer
 var playerdirection = 0
 var x = 1
@@ -78,9 +79,10 @@ func _physics_process(_delta):
 			Input.action_release("move_right")
 			Input.action_release("move_down")
 			Input.action_release("move_left")
-		motion.y += gravity
-		if motion.y > maxgravity:
-			motion.y = maxgravity
+		if gravityoff == false:
+			motion.y += gravity
+			if motion.y > maxgravity:
+				motion.y = maxgravity
 		if is_on_floor():
 			if Input.is_action_pressed("move_down"):
 				while x == 1:
@@ -151,3 +153,14 @@ func _on_Item2_shopitem2buy():
 func _on_Ending_upgradeshide():
 	Input.action_press("cheatsenable")
 	get_node("ChargeBar").hide()
+
+
+func _on_Tractor_beam_Tractorbeamactivate():
+	motion.y = -30
+	motion.x = -10
+	gravityoff = true
+
+
+func _on_Tractor_beam_Tractorbeamdeactivate():
+	gravityoff = false
+	motion.x = -50

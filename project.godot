@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Lab- 5"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://MainMenue.tscn"
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -21,6 +21,8 @@ config/icon="res://icon.png"
 
 window/size/width=1440
 window/size/height=1080
+window/size/resizable=false
+window/size/borderless=true
 window/stretch/aspect="keep"
 
 [gui]

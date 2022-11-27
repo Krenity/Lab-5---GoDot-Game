@@ -20,3 +20,6 @@ texture = ExtResource( 2 )
 texture_scale = 0.2
 color = Color( 0.141176, 0.85098, 0.866667, 1 )
 energy = 0.7
+__meta__ = {
+"_edit_lock_": true
+}
