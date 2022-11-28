@@ -3786,6 +3786,7 @@ __meta__ = {
 [connection signal="Tractorbeamdeactivate" from="Level2/Tractor beam" to="player" method="_on_Tractor_beam_Tractorbeamdeactivate"]
 [connection signal="body_entered" from="Level2/Tractor beam" to="Level2/Tractor beam" method="_on_Tractor_beam_body_entered"]
 [connection signal="body_exited" from="Level2/Tractor beam" to="Level2/Tractor beam" method="_on_Tractor_beam_body_exited"]
+[connection signal="item1bought" from="player" to="player/Label" method="_on_player_item1bought"]
 [connection signal="flaskrecived" from="player/Label" to="player" method="_on_Label_flaskrecived"]
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_exited"]

@@ -10,3 +10,7 @@ func _on_Area2D_test():
 	count += 1
 	emit_signal("flaskrecived")
 	$".".text = str(count)
+
+
+func _on_player_item1bought():
+	count = count - 10

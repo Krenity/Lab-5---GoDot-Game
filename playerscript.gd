@@ -137,11 +137,12 @@ func _on_Label_flaskrecived():
 	count += 1
 	$Flask.play()
 
-
+signal item1bought 
 func _on_Item1_shopitem1buy():
 	if count >= 10:
 		$Label.text = str(count - 10)
 		count = count - 10
+		emit_signal("item1bought")
 		get_node("ChargeBar").show()
 
 
