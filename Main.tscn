@@ -3484,6 +3484,96 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Flask25" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1141, -7455 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask29" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -561, -7695 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask30" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -980, -7966 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask31" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -558, -8060 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask32" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -260, -8300 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask33" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -739, -8623 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask34" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -271, -8918 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask35" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1221, -9019 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask36" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1063, -9298 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flask37" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -937, -8780 )
+rotation = -0.0279776
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="Flask13" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
 position = Vector2( -1331.98, -4165.4 )
 scale = Vector2( 2.24, 2.24 )
@@ -3690,6 +3780,15 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Flask38" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
+position = Vector2( -1322, -476 )
+rotation = 0.00143378
+scale = Vector2( 2.24, 2.24 )
+script = ExtResource( 52 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="Flask11" parent="Functionalities/AllFlasks" instance=ExtResource( 50 )]
 position = Vector2( -532.82, -3884.76 )
 scale = Vector2( 2.24, 2.24 )
@@ -3810,6 +3909,26 @@ __meta__ = {
 [connection signal="body_exited" from="Functionalities/Shop Detection" to="Functionalities/Shop Detection" method="_on_Shop_Detection_body_exited"]
 [connection signal="body_entered" from="Functionalities/AllFlasks/Flask" to="Functionalities/AllFlasks/Flask" method="_on_Area2D_body_entered"]
 [connection signal="test" from="Functionalities/AllFlasks/Flask" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask25" to="Functionalities/AllFlasks/Flask25" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask25" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask29" to="Functionalities/AllFlasks/Flask29" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask29" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask30" to="Functionalities/AllFlasks/Flask30" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask30" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask31" to="Functionalities/AllFlasks/Flask31" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask31" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask32" to="Functionalities/AllFlasks/Flask32" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask32" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask33" to="Functionalities/AllFlasks/Flask33" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask33" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask34" to="Functionalities/AllFlasks/Flask34" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask34" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask35" to="Functionalities/AllFlasks/Flask35" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask35" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask36" to="Functionalities/AllFlasks/Flask36" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask36" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask37" to="Functionalities/AllFlasks/Flask37" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask37" to="player/Label" method="_on_Area2D_test"]
 [connection signal="body_entered" from="Functionalities/AllFlasks/Flask13" to="Functionalities/AllFlasks/Flask13" method="_on_Area2D_body_entered"]
 [connection signal="test" from="Functionalities/AllFlasks/Flask13" to="player/Label" method="_on_Area2D_test"]
 [connection signal="body_entered" from="Functionalities/AllFlasks/Flask14" to="Functionalities/AllFlasks/Flask14" method="_on_Area2D_body_entered"]
@@ -3860,6 +3979,8 @@ __meta__ = {
 [connection signal="test" from="Functionalities/AllFlasks/Flask20" to="player/Label" method="_on_Area2D_test"]
 [connection signal="body_entered" from="Functionalities/AllFlasks/Flask21" to="Functionalities/AllFlasks/Flask21" method="_on_Area2D_body_entered"]
 [connection signal="test" from="Functionalities/AllFlasks/Flask21" to="player/Label" method="_on_Area2D_test"]
+[connection signal="body_entered" from="Functionalities/AllFlasks/Flask38" to="Functionalities/AllFlasks/Flask38" method="_on_Area2D_body_entered"]
+[connection signal="test" from="Functionalities/AllFlasks/Flask38" to="player/Label" method="_on_Area2D_test"]
 [connection signal="body_entered" from="Functionalities/AllFlasks/Flask11" to="Functionalities/AllFlasks/Flask11" method="_on_Area2D_body_entered"]
 [connection signal="test" from="Functionalities/AllFlasks/Flask11" to="player/Label" method="_on_Area2D_test"]
 [connection signal="body_entered" from="Functionalities/MusicDetectors" to="Functionalities/MusicDetectors" method="_on_MusicDetectors_body_entered"]
