@@ -1131,32 +1131,19 @@ occluder = SubResource( 45 )
 [node name="Particles2" type="Area2D" parent="Level3"]
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Level3/Particles2"]
-position = Vector2( 467.583, -11046 )
-rotation = -0.261799
-amount = 1000
+position = Vector2( 523, -11287 )
+rotation = 0.409135
+amount = 1500
 lifetime = 9.68
+emission_shape = 2
+emission_rect_extents = Vector2( 1500, 1 )
 initial_velocity = 3.11
 initial_velocity_random = 1.0
 angular_velocity = 10.47
 angular_velocity_random = 1.0
-orbit_velocity = -0.06
-orbit_velocity_random = 1.0
 linear_accel = 1.1
 linear_accel_random = 1.0
 radial_accel = 0.32
-scale_amount_curve = SubResource( 37 )
-
-[node name="CPUParticles2D3" type="CPUParticles2D" parent="Level3/Particles2"]
-position = Vector2( -2367, -11762 )
-rotation = 0.261799
-amount = 1000
-lifetime = 9.68
-initial_velocity = 3.11
-initial_velocity_random = 1.0
-angular_velocity = 10.47
-angular_velocity_random = 1.0
-orbit_velocity = 0.05
-orbit_velocity_random = 1.0
 scale_amount_curve = SubResource( 37 )
 
 [node name="Pixil-frame-0(56)" type="Sprite" parent="Level3/Particles2"]
@@ -2525,7 +2512,7 @@ polygon = PoolVector2Array( -159.057, -2033.04, -158.925, -2047, -97.1487, -2047
 polygon = PoolVector2Array( -46.9672, -2031.11, 0.381002, -2030.83, -4.47093, -2017, -47.0787, -2016.88 )
 
 [node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PoolVector2Array( 77, -2062, 81, -1690, 897, -1697.67, 896, -2033, 882.333, -2034, 884, -1711.33, 96, -1711.33, 95.3333, -2066.67 )
+polygon = PoolVector2Array( 81, -2063, 81, -1697, 897, -1697, 895, -2031, 881, -2031, 881, -1711, 95, -1711, 95, -2063 )
 
 [node name="Front Decoration" type="Area2D" parent="."]
 
