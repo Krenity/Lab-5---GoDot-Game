@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=2]
+[gd_scene load_steps=111 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -66,6 +66,7 @@
 [ext_resource path="res://Ending.gd" type="Script" id=64]
 [ext_resource path="res://Tractor beam.gd" type="Script" id=65]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (1).png" type="Texture" id=66]
+[ext_resource path="res://Assets/Images/pixil-frame-0 (62).png" type="Texture" id=67]
 
 [sub_resource type="Curve" id=28]
 max_value = 29.84
@@ -666,7 +667,7 @@ extents = Vector2( 47.0207, 14.9932 )
 colors = PoolColorArray( 0.0916138, 0.617188, 0.149098, 1, 0.110363, 0.21875, 0.0495605, 1 )
 
 [sub_resource type="RectangleShape2D" id=51]
-extents = Vector2( 239.417, 191.167 )
+extents = Vector2( 239.417, 93.0834 )
 
 [sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 10, 51.6689 )
@@ -700,29 +701,28 @@ scale = Vector2( 0.999999, 1.02336 )
 
 [node name="backround" type="Area2D" parent="Level4"]
 
-[node name="Pixil-frame-0(53)2" type="Sprite" parent="Level4/backround"]
-position = Vector2( 1097.71, -2917.35 )
-scale = Vector2( 2.09918, 1.84686 )
-texture = ExtResource( 36 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="01Background" type="Sprite" parent="Level4/backround"]
 position = Vector2( 1098.41, 1682.99 )
 scale = Vector2( 3.45118, 7.82914 )
 texture = ExtResource( 44 )
 
 [node name="Pixil-frame-0(1)" type="Sprite" parent="Level4/backround"]
-position = Vector2( 1115, -192.014 )
-scale = Vector2( 2.904, 1.40127 )
+position = Vector2( 1115, -189.082 )
+scale = Vector2( 2.904, 1.38954 )
 texture = ExtResource( 66 )
+
+[node name="Pixil-frame-0(62)" type="Sprite" parent="Level4/backround/Pixil-frame-0(1)"]
+position = Vector2( -5.18894, -876.609 )
+scale = Vector2( 0.751195, 1.97097 )
+texture = ExtResource( 67 )
 
 [node name="Decorations" type="Area2D" parent="Level4"]
 
 [node name="ShopAnim3" parent="Level4/Decorations" instance=ExtResource( 14 )]
 position = Vector2( 1571, -42.0186 )
 scale = Vector2( 3.2435, 3.16946 )
+
+[node name="Particles" type="Area2D" parent="Level4"]
 
 [node name="Level3" type="Area2D" parent="."]
 
@@ -1151,9 +1151,9 @@ occluder = SubResource( 45 )
 [node name="Particles2" type="Area2D" parent="Level3"]
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="Level3/Particles2"]
-position = Vector2( -1050, -9805 )
+position = Vector2( -1117, -9802 )
 rotation = -0.00998363
-amount = 1500
+amount = 500
 lifetime = 6.23
 emission_shape = 2
 emission_rect_extents = Vector2( 1000, 1 )
@@ -1161,7 +1161,7 @@ initial_velocity = 12.64
 angular_velocity = 10.59
 angular_velocity_random = 1.0
 orbit_velocity = 0.01
-linear_accel = 63.01
+linear_accel = 115.36
 linear_accel_random = 1.0
 radial_accel = 0.32
 scale_amount_curve = SubResource( 37 )
@@ -1196,12 +1196,13 @@ shape = SubResource( 48 )
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Level2/Tractor beam"]
 position = Vector2( -716.753, -6217.52 )
 rotation = 3.13641
+scale = Vector2( 0.482, 1.498 )
 amount = 1426
 lifetime = 4.22
 speed_scale = 0.07
 lifetime_randomness = 1.0
 emission_shape = 2
-emission_rect_extents = Vector2( 84.326, 1 )
+emission_rect_extents = Vector2( 170, 1 )
 spread = 55.81
 scale_amount_curve = SubResource( 49 )
 color_ramp = SubResource( 50 )
@@ -2303,7 +2304,7 @@ scale = Vector2( 1.73036, 1.73036 )
 texture = ExtResource( 10 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -477, -9989 )
+position = Vector2( -630, -9984 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -2338,11 +2339,32 @@ tile_data = PoolIntArray( -14811168, 8, 37, -14811167, 8, 38, -14811166, 8, 39, 
 position = Vector2( -1816, -9998 )
 scale = Vector2( 0.999999, 1.02336 )
 
+[node name="Cloud19" type="Sprite" parent="Platforms2"]
+position = Vector2( 948.001, -102.594 )
+rotation = 0.0051258
+scale = Vector2( 1.38672, 1.38672 )
+texture = ExtResource( 38 )
+offset = Vector2( 4.32666, 0 )
+flip_h = true
+
 [node name="Cloud15" type="Sprite" parent="Platforms2"]
 position = Vector2( 727, -97.7168 )
 scale = Vector2( 1.38672, 1.38672 )
 texture = ExtResource( 38 )
 offset = Vector2( 2.88452, 0 )
+
+[node name="Cloud20" type="Sprite" parent="Platforms2"]
+position = Vector2( 684.001, -428.002 )
+scale = Vector2( 1.38672, 1.38672 )
+texture = ExtResource( 38 )
+offset = Vector2( 2.88452, 0 )
+
+[node name="Cloud21" type="Sprite" parent="Platforms2"]
+position = Vector2( 684.001, -428.002 )
+scale = Vector2( 1.38672, 1.38672 )
+texture = ExtResource( 38 )
+offset = Vector2( 2.88452, 0 )
+flip_h = true
 
 [node name="Cloud16" type="Sprite" parent="Platforms2"]
 position = Vector2( 794, -97.7168 )
@@ -2359,14 +2381,6 @@ texture = ExtResource( 38 )
 position = Vector2( 951, -101.626 )
 scale = Vector2( 1.38672, 1.38672 )
 texture = ExtResource( 38 )
-
-[node name="Cloud19" type="Sprite" parent="Platforms2"]
-position = Vector2( 947.001, -103.571 )
-rotation = 0.0051258
-scale = Vector2( 1.38672, 1.38672 )
-texture = ExtResource( 38 )
-offset = Vector2( 4.32666, 0 )
-flip_h = true
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 scale = Vector2( 3, 3 )
@@ -2572,7 +2586,13 @@ polygon = PoolVector2Array( 81, -2063, 81, -1697, 897, -1697, 895, -2031, 881, -
 [node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="Collisions"]
 position = Vector2( 0, -253.048 )
 scale = Vector2( 1, 0.92444 )
-polygon = PoolVector2Array( -389, -3355.67, -260.667, -3356, -255, -3368.67, -262.667, -3378, -390.333, -3376.67, -394, -3366 )
+polygon = PoolVector2Array( -389.333, -3356.21, -259, -3356.94, -255.333, -3367.39, -262.667, -3378, -385, -3376.77, -395, -3369.19 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="Collisions"]
+position = Vector2( -13.3333, -366.667 )
+scale = Vector2( 1, 0.92444 )
+polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -332.333, -3366.72, -338.333, -3376.46, -385, -3376.77, -395, -3369.19 )
 one_way_collision = true
 
 [node name="Front Decoration" type="Area2D" parent="."]
@@ -3255,7 +3275,7 @@ position = Vector2( 1379.5, -5379 )
 scale = Vector2( 3, 3 )
 
 [node name="21" type="CollisionShape2D" parent="Functionalities/WindDetection"]
-position = Vector2( -689.917, -1671.5 )
+position = Vector2( -168.167, -1600 )
 shape = SubResource( 51 )
 
 [node name="shop ui" type="Area2D" parent="Functionalities"]
