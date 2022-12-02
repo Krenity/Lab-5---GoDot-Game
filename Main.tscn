@@ -3485,8 +3485,8 @@ texture = ExtResource( 39 )
 flip_h = true
 
 [node name="Cloud67" type="Sprite" parent="Platforms2"]
-position = Vector2( 1661, 238.431 )
-scale = Vector2( 1, 0.977173 )
+position = Vector2( 1681, 244.294 )
+scale = Vector2( 1, 1.82768 )
 texture = ExtResource( 39 )
 
 [node name="Cloud47" type="Sprite" parent="Platforms2/Cloud67"]
@@ -3725,7 +3725,8 @@ texture = ExtResource( 39 )
 flip_h = true
 
 [node name="Cloud48" type="Sprite" parent="Platforms2/Cloud72"]
-position = Vector2( 55.0001, 1.00098 )
+position = Vector2( 55.0001, -18.499 )
+scale = Vector2( 1, 1.72222 )
 texture = ExtResource( 39 )
 
 [node name="Cloud47" type="Sprite" parent="Platforms2/Cloud72/Cloud48"]
@@ -4897,7 +4898,8 @@ position = Vector2( 31, -9 )
 texture = ExtResource( 39 )
 
 [node name="Cloud47" type="Sprite" parent="Platforms2/Cloud74/Cloud51"]
-position = Vector2( -41, 1.00098 )
+position = Vector2( -41, -11.999 )
+scale = Vector2( 1, 1.48148 )
 texture = ExtResource( 39 )
 flip_h = true
 
@@ -5022,7 +5024,8 @@ texture = ExtResource( 39 )
 flip_h = true
 
 [node name="Cloud50" type="Sprite" parent="Platforms2/Cloud77"]
-position = Vector2( 108, -6.00098 )
+position = Vector2( 108, -34.001 )
+scale = Vector2( 1, 2.03704 )
 texture = ExtResource( 39 )
 
 [node name="Cloud47" type="Sprite" parent="Platforms2/Cloud77/Cloud50"]
@@ -5084,6 +5087,108 @@ texture = ExtResource( 39 )
 position = Vector2( -41, 1.00098 )
 texture = ExtResource( 39 )
 flip_h = true
+
+[node name="Cloud48" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 94.0001, 169 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud49" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 47, 193 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud50" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 41, 219 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud51" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( -62.0001, 219 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud52" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 199, 95.5001 )
+scale = Vector2( 1, 2.42592 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud53" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 288, 92 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud54" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 330, 61.5 )
+scale = Vector2( 1, 1.38889 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud55" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 364, 38 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud56" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 413, -16 )
+scale = Vector2( 1, 1.66667 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud57" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 441, -26 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud58" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1189, -30 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud59" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1361, 33 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud60" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1258, -11 )
+texture = ExtResource( 39 )
+flip_h = true
+
+[node name="Cloud61" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1438, 74 )
+texture = ExtResource( 39 )
+
+[node name="Cloud62" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1397, 87 )
+scale = Vector2( 1, 2.44445 )
+texture = ExtResource( 39 )
+
+[node name="Cloud63" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1401, 139 )
+scale = Vector2( 1, 2 )
+texture = ExtResource( 39 )
+
+[node name="Cloud64" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1414, 172 )
+texture = ExtResource( 39 )
+
+[node name="Cloud65" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1440, 169 )
+texture = ExtResource( 39 )
+
+[node name="Cloud66" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1438, 191 )
+texture = ExtResource( 39 )
+
+[node name="Cloud67" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1460, 211 )
+texture = ExtResource( 39 )
+
+[node name="Cloud68" type="Sprite" parent="Platforms2/Cloud78/Cloud51"]
+position = Vector2( 1494, 231 )
+texture = ExtResource( 39 )
 
 [node name="Cloud79" type="Sprite" parent="Platforms2"]
 position = Vector2( 296, 213.023 )
