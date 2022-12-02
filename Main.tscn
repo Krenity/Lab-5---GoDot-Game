@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=113 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -666,8 +666,14 @@ extents = Vector2( 47.0207, 14.9932 )
 [sub_resource type="Gradient" id=33]
 colors = PoolColorArray( 0.0916138, 0.617188, 0.149098, 1, 0.110363, 0.21875, 0.0495605, 1 )
 
+[sub_resource type="Curve" id=53]
+_data = [ Vector2( 0.183168, 0.1375 ), 0.0, 0.0, 0, 0, Vector2( 0.524752, 0.510227 ), -5.90259, -5.90259, 0, 0, Vector2( 0.935644, 0.955682 ), 0.0, 0.0, 0, 0 ]
+
 [sub_resource type="RectangleShape2D" id=51]
-extents = Vector2( 239.417, 93.0834 )
+extents = Vector2( 238.917, 46.1667 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 51.2917, 91.3333 )
 
 [sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 10, 51.6689 )
@@ -2347,6 +2353,96 @@ texture = ExtResource( 38 )
 offset = Vector2( 4.32666, 0 )
 flip_h = true
 
+[node name="Cloud4" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( -234.146, 215.765 )
+scale = Vector2( 1.59959, 1.8129 )
+texture = ExtResource( 39 )
+
+[node name="Cloud5" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( -133.649, 232.577 )
+scale = Vector2( 1.59959, 1.8129 )
+texture = ExtResource( 39 )
+
+[node name="Cloud8" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( -63.7901, 218.811 )
+scale = Vector2( 1.59959, 1.8129 )
+texture = ExtResource( 39 )
+
+[node name="Cloud9" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( -63.7901, 218.811 )
+scale = Vector2( 1.59959, 1.8129 )
+texture = ExtResource( 39 )
+
+[node name="Cloud6" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( -0.925934, 240.372 )
+scale = Vector2( 1.59959, 1.8129 )
+texture = ExtResource( 39 )
+
+[node name="Cloud7" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( -0.925934, 240.372 )
+scale = Vector2( 1.59959, 1.8129 )
+texture = ExtResource( 39 )
+
+[node name="Cloud3" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 99.2271, 224.298 )
+scale = Vector2( 2.72328, 3.01196 )
+texture = ExtResource( 33 )
+
+[node name="Cloud14" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 379.03, 225.093 )
+scale = Vector2( 2.72328, 3.01196 )
+texture = ExtResource( 33 )
+
+[node name="Cloud15" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 379.03, 225.093 )
+scale = Vector2( 2.72328, 3.01196 )
+texture = ExtResource( 33 )
+
+[node name="Cloud10" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 184.255, 212.63 )
+scale = Vector2( 2.72328, 3.01196 )
+texture = ExtResource( 33 )
+
+[node name="Cloud11" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 184.255, 212.63 )
+scale = Vector2( 2.72328, 3.01196 )
+texture = ExtResource( 33 )
+
+[node name="Cloud2" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 244.861, 217.892 )
+scale = Vector2( 1.65589, 1.65589 )
+texture = ExtResource( 38 )
+
+[node name="Cloud16" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 70.3252, 213.854 )
+scale = Vector2( 1.65589, 1.65589 )
+texture = ExtResource( 38 )
+
+[node name="Cloud17" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 268.088, 247.369 )
+scale = Vector2( 1.65589, 1.65589 )
+texture = ExtResource( 38 )
+
+[node name="Cloud18" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 336.465, 221.65 )
+scale = Vector2( 1.65589, 1.65589 )
+texture = ExtResource( 38 )
+
+[node name="Cloud19" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 336.465, 221.65 )
+scale = Vector2( 1.65589, 1.65589 )
+texture = ExtResource( 38 )
+
+[node name="Cloud12" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 514.552, 215.1 )
+scale = Vector2( 1.65589, 1.65589 )
+texture = ExtResource( 38 )
+
+[node name="Cloud13" type="Sprite" parent="Platforms2/Cloud19"]
+position = Vector2( 514.552, 215.1 )
+scale = Vector2( 1.65589, 1.65589 )
+texture = ExtResource( 38 )
+
 [node name="Cloud15" type="Sprite" parent="Platforms2"]
 position = Vector2( 727, -97.7168 )
 scale = Vector2( 1.38672, 1.38672 )
@@ -2587,12 +2683,43 @@ polygon = PoolVector2Array( 81, -2063, 81, -1697, 897, -1697, 895, -2031, 881, -
 position = Vector2( 0, -253.048 )
 scale = Vector2( 1, 0.92444 )
 polygon = PoolVector2Array( -389.333, -3356.21, -259, -3356.94, -255.333, -3367.39, -262.667, -3378, -385, -3376.77, -395, -3369.19 )
-one_way_collision = true
 
 [node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="Collisions"]
 position = Vector2( -13.3333, -366.667 )
 scale = Vector2( 1, 0.92444 )
 polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -332.333, -3366.72, -338.333, -3376.46, -385, -3376.77, -395, -3369.19 )
+
+[node name="CollisionPolygon2D46" type="CollisionPolygon2D" parent="Collisions"]
+position = Vector2( -50, -412.667 )
+scale = Vector2( 0.436834, 0.924441 )
+polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -332.333, -3366.72, -338.333, -3376.46, -385, -3376.77, -395, -3369.19 )
+
+[node name="CollisionPolygon2D47" type="CollisionPolygon2D" parent="Collisions"]
+position = Vector2( 276.527, -519.99 )
+scale = Vector2( 1.8218, 0.924447 )
+polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -334.025, -3358.06, -332.333, -3366.72, -333.66, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -395, -3369.19, -393.767, -3357.71 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D51" type="CollisionPolygon2D" parent="Collisions"]
+position = Vector2( -92.3334, -657 )
+scale = Vector2( 0.420813, 0.924448 )
+polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -334.025, -3358.06, -332.333, -3366.72, -333.66, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -395, -3369.19, -393.767, -3357.71 )
+
+[node name="CollisionPolygon2D50" type="CollisionPolygon2D" parent="Collisions"]
+position = Vector2( -196.935, -657.995 )
+scale = Vector2( 0.430786, 0.924448 )
+polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -334.025, -3358.06, -332.333, -3366.72, -333.66, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -395, -3369.19, -393.767, -3357.71 )
+
+[node name="CollisionPolygon2D48" type="CollisionPolygon2D" parent="Collisions"]
+position = Vector2( 492.377, -520.662 )
+scale = Vector2( 2.01907, 0.924445 )
+polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -333.839, -3357.69, -332.333, -3366.72, -334.169, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -395, -3369.19, -393.767, -3357.71 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D49" type="CollisionPolygon2D" parent="Collisions"]
+position = Vector2( 615.579, -521.995 )
+scale = Vector2( 1.96128, 0.924445 )
+polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -334.43, -3358.42, -332.333, -3366.72, -334.26, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -393.745, -3374.64, -395, -3369.19, -393.767, -3357.71 )
 one_way_collision = true
 
 [node name="Front Decoration" type="Area2D" parent="."]
@@ -3268,15 +3395,32 @@ scale_amount = 3.87
 scale_amount_random = 0.05
 color_initial_ramp = SubResource( 33 )
 
+[node name="CPUParticles2D32" type="CPUParticles2D" parent="Particles"]
+position = Vector2( -2749, -10154 )
+amount = 500
+lifetime = 10.0
+texture = ExtResource( 43 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 127.57
+gravity = Vector2( 81, 0 )
+scale_amount = 0.25
+scale_amount_random = 0.23
+scale_amount_curve = SubResource( 53 )
+
 [node name="Functionalities" type="Area2D" parent="."]
 
 [node name="WindDetection" type="Area2D" parent="Functionalities"]
 position = Vector2( 1379.5, -5379 )
 scale = Vector2( 3, 3 )
 
-[node name="21" type="CollisionShape2D" parent="Functionalities/WindDetection"]
-position = Vector2( -168.167, -1600 )
+[node name="22" type="CollisionShape2D" parent="Functionalities/WindDetection"]
+position = Vector2( -685.167, -1589.67 )
 shape = SubResource( 51 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Functionalities/WindDetection"]
+position = Vector2( -853.833, -1951 )
+shape = SubResource( 52 )
 
 [node name="shop ui" type="Area2D" parent="Functionalities"]
 position = Vector2( 892.405, -855.119 )
