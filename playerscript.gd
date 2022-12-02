@@ -1,8 +1,7 @@
 extends KinematicBody2D
 var maxjump = -400
 var jumpheight = -50
-var isinwindRight = false
-var isinwindLeft = false
+var wind = false
 var jumping = false
 var doubledose = false
 var windspeed = 1.05
@@ -60,14 +59,10 @@ func _physics_process(_delta):
 			
 			
 	if cheats == false:
-		if isinwindRight == true:
+		if wind == true:
 			motion.x += 5
 			if motion.x > playerspeed*windspeed:
 				motion.x = playerspeed*windspeed
-		if isinwindLeft == true:
-			motion.x += -5
-			if motion.x > -playerspeed*windspeed:
-				motion.x = -playerspeed*windspeed
 		if Input.is_action_pressed("move_left"):
 			playerdirection = 0
 			$Sprite.flip_h = true
@@ -169,26 +164,18 @@ func _physics_process(_delta):
 
 #SHOP SYSTEM/UPGRADE
 
-func _on_Label_flaskrecived():
-	if doubledose == false:
-		count += 1
-	if doubledose ==  true:
-		count += 2
-	$Flask.play()
 
-signal item1bought 
 func _on_Item1_shopitem1buy():
 	if count >= 10:
-		$Label.text = str(count - 10)
 		count = count - 10
-		emit_signal("item1bought")
 		get_node("ChargeBar").show()
+		$Label.text = str(count)
 
 
 func _on_Item2_shopitem2buy():
 	if count >= 30:
-		$Label.text = str(count - 30)
 		maxjump = -550
+		$Label.text = str(count)
 
 
 func _on_Ending_upgradeshide():
@@ -208,18 +195,26 @@ func _on_Tractor_beam_Tractorbeamdeactivate():
 
 
 func _on_WindDetection_body_entered(_body):
-	isinwindRight = true
+	wind = true
 
 
-func _on_WindDetection_body_exited(_body):
-	isinwindRight = false
+func _on_WindDetection_body_exited():
+	wind = false
+	
 
 
 func _on_Item3_shopitem3buy():
 	if count >= 50:
+		$Label.text = str(count)
 		count = count - 50
-		$label.text = str(count - 50)
 		doubledose = true
-	pass
 		
-	
+func _on_Flask_test():
+	if doubledose == false:
+		count += 1
+		$Label.text = str(count)
+	if doubledose ==  true:
+		count += 2
+		$Label.text = str(count)
+	$Flask.play()
+
