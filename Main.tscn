@@ -67,7 +67,7 @@
 [ext_resource path="res://Tractor beam.gd" type="Script" id=65]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (1).png" type="Texture" id=66]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (62).png" type="Texture" id=67]
-[ext_resource path="res://shop ui.tscn" type="PackedScene" id=68]
+[ext_resource path="res://shopItem3.gd" type="Script" id=68]
 
 [sub_resource type="Curve" id=53]
 _data = [ Vector2( 0.935644, 0.955682 ), 0.0, 0.0, 0, 0 ]
@@ -670,9 +670,6 @@ extents = Vector2( 47.0207, 14.9932 )
 [sub_resource type="Gradient" id=33]
 colors = PoolColorArray( 0.0916138, 0.617188, 0.149098, 1, 0.110363, 0.21875, 0.0495605, 1 )
 
-[sub_resource type="RectangleShape2D" id=51]
-extents = Vector2( 235.646, 407.771 )
-
 [sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 10, 51.6689 )
 
@@ -683,6 +680,9 @@ extents = Vector2( 10, 51.6689 )
 [sub_resource type="DynamicFont" id=39]
 size = 61
 font_data = ExtResource( 51 )
+
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 235.646, 407.771 )
 
 [sub_resource type="RectangleShape2D" id=41]
 extents = Vector2( 189.369, 154.5 )
@@ -2938,26 +2938,6 @@ scale = Vector2( 0.430786, 0.924448 )
 polygon = PoolVector2Array( -409.157, -3353.53, -315.53, -3353.53, -315.53, -3377.33, -408.384, -3378.05 )
 one_way_collision = true
 
-[node name="Front Decoration" type="Area2D" parent="."]
-
-[node name="Plant" type="Sprite" parent="Front Decoration"]
-position = Vector2( -237.634, -378.808 )
-rotation = -0.527178
-scale = Vector2( 2.90385, 2.90385 )
-texture = ExtResource( 17 )
-
-[node name="Plant2" type="Sprite" parent="Front Decoration"]
-position = Vector2( -833.968, -1493.6 )
-rotation = 0.585874
-scale = Vector2( 2.90385, 2.90385 )
-texture = ExtResource( 17 )
-
-[node name="Plant3" type="Sprite" parent="Front Decoration"]
-position = Vector2( -1199.94, -1780.43 )
-rotation = 0.00526619
-scale = Vector2( 2.90385, 2.90385 )
-texture = ExtResource( 17 )
-
 [node name="Particles" type="Area2D" parent="."]
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Particles"]
@@ -3613,16 +3593,8 @@ color_initial_ramp = SubResource( 33 )
 
 [node name="Functionalities" type="Area2D" parent="."]
 
-[node name="WindDetection" type="Area2D" parent="Functionalities"]
-position = Vector2( 1379.5, -5379 )
-scale = Vector2( 3, 3 )
-
-[node name="22" type="CollisionShape2D" parent="Functionalities/WindDetection"]
-position = Vector2( -700.813, -1898.33 )
-shape = SubResource( 51 )
-
 [node name="shop ui" type="Area2D" parent="Functionalities"]
-position = Vector2( 892.405, -855.119 )
+position = Vector2( 895, -905 )
 scale = Vector2( 0.818037, 0.818037 )
 script = ExtResource( 54 )
 __meta__ = {
@@ -3644,7 +3616,6 @@ rotation = 0.374099
 shape = SubResource( 43 )
 
 [node name="Panel" type="Panel" parent="Functionalities/shop ui"]
-visible = false
 margin_left = -2100.0
 margin_top = -4141.0
 margin_right = -1551.0
@@ -3652,7 +3623,7 @@ margin_bottom = -3904.0
 custom_styles/panel = SubResource( 42 )
 
 [node name="Border01" type="Sprite" parent="Functionalities/shop ui/Panel"]
-position = Vector2( 39.875, 181.5 )
+position = Vector2( 47.5256, 191.301 )
 scale = Vector2( 5.83696, 6.06521 )
 texture = ExtResource( 55 )
 hframes = 2
@@ -3674,11 +3645,11 @@ hframes = 3
 frame = 1
 
 [node name="Label2 Text" type="Label" parent="Functionalities/shop ui/Panel"]
-margin_left = 150.936
-margin_top = 137.853
-margin_right = 447.936
-margin_bottom = 198.853
-rect_scale = Vector2( 0.9, 1 )
+margin_left = 201.553
+margin_top = 86.1714
+margin_right = 476.553
+margin_bottom = 147.171
+rect_scale = Vector2( 0.616128, 0.677023 )
 theme = SubResource( 38 )
 custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
@@ -3727,10 +3698,10 @@ custom_fonts/font = SubResource( 39 )
 text = "Unusual Cola"
 
 [node name="Item2" type="Button" parent="Functionalities/shop ui/Panel"]
-margin_left = 372.756
-margin_top = 101.871
-margin_right = 456.756
-margin_bottom = 185.871
+margin_left = 215.0
+margin_top = 103.285
+margin_right = 299.0
+margin_bottom = 187.285
 rect_scale = Vector2( 1.53, 1.53 )
 flat = true
 expand_icon = true
@@ -3755,22 +3726,58 @@ custom_fonts/font = SubResource( 39 )
 text = "Grey Slurp"
 
 [node name="Label2" type="Label" parent="Functionalities/shop ui/Panel/Item2"]
-margin_left = -237.859
-margin_top = -102.287
-margin_right = -53.8594
-margin_bottom = -19.2869
-text = "[Place Holder]"
+margin_left = -138.0
+margin_top = -102.0
+margin_right = 218.0
+margin_bottom = -21.0
+text = "Boosts your jumping ability, this is useful for for the bigger an more complex leaps. This cost 30 Flasks!"
+autowrap = true
+
+[node name="Item3" type="Button" parent="Functionalities/shop ui/Panel"]
+margin_left = 372.756
+margin_top = 101.871
+margin_right = 456.756
+margin_bottom = 185.871
+rect_scale = Vector2( 1.53, 1.53 )
+flat = true
+expand_icon = true
+script = ExtResource( 68 )
+
+[node name="Sprite2" type="Sprite" parent="Functionalities/shop ui/Panel/Item3"]
+position = Vector2( 43.8849, 42.6086 )
+scale = Vector2( 3.26797, 3.26797 )
+texture = ExtResource( 56 )
+region_enabled = true
+region_rect = Rect2( 508.152, 129.842, 11.9463, 26.6801 )
+
+[node name="Label7 Text" type="Label" parent="Functionalities/shop ui/Panel/Item3"]
+margin_left = 10.3463
+margin_top = 92.0083
+margin_right = 411.346
+margin_bottom = 153.008
+rect_scale = Vector2( 0.252424, 0.320724 )
+theme = SubResource( 38 )
+custom_colors/font_color = Color( 0.662745, 0.631373, 0.0666667, 1 )
+custom_fonts/font = SubResource( 39 )
+text = "Double Dose"
+
+[node name="Label3" type="Label" parent="Functionalities/shop ui/Panel/Item3"]
+margin_left = -238.0
+margin_top = -102.0
+margin_right = 109.0
+margin_bottom = -19.0
+text = "This increases the value of every flask you collect to to x2 , this costs 50 flasks!"
+autowrap = true
 
 [node name="Panel2" type="Panel" parent="Functionalities/shop ui"]
-visible = false
-margin_left = -2239.31
-margin_top = -7931.43
-margin_right = -1690.31
-margin_bottom = -7694.43
+margin_left = -2246.84
+margin_top = -7965.41
+margin_right = -1697.84
+margin_bottom = -7728.41
 custom_styles/panel = SubResource( 42 )
 
 [node name="Border01" type="Sprite" parent="Functionalities/shop ui/Panel2"]
-position = Vector2( 39.875, 181.5 )
+position = Vector2( 47.5256, 191.301 )
 scale = Vector2( 5.83696, 6.06521 )
 texture = ExtResource( 55 )
 hframes = 2
@@ -3792,11 +3799,11 @@ hframes = 3
 frame = 1
 
 [node name="Label2 Text" type="Label" parent="Functionalities/shop ui/Panel2"]
-margin_left = 150.936
-margin_top = 137.853
-margin_right = 447.936
-margin_bottom = 198.853
-rect_scale = Vector2( 0.9, 1 )
+margin_left = 201.553
+margin_top = 86.1714
+margin_right = 476.553
+margin_bottom = 147.171
+rect_scale = Vector2( 0.616128, 0.677023 )
 theme = SubResource( 38 )
 custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
@@ -3845,10 +3852,10 @@ custom_fonts/font = SubResource( 39 )
 text = "Unusual Cola"
 
 [node name="Item2" type="Button" parent="Functionalities/shop ui/Panel2"]
-margin_left = 372.756
-margin_top = 101.871
-margin_right = 456.756
-margin_bottom = 185.871
+margin_left = 215.0
+margin_top = 103.285
+margin_right = 299.0
+margin_bottom = 187.285
 rect_scale = Vector2( 1.53, 1.53 )
 flat = true
 expand_icon = true
@@ -3873,22 +3880,58 @@ custom_fonts/font = SubResource( 39 )
 text = "Grey Slurp"
 
 [node name="Label2" type="Label" parent="Functionalities/shop ui/Panel2/Item2"]
-margin_left = -237.859
-margin_top = -102.287
-margin_right = -53.8594
-margin_bottom = -19.2869
-text = "[Place Holder]"
+margin_left = -138.0
+margin_top = -102.0
+margin_right = 218.0
+margin_bottom = -21.0
+text = "Boosts your jumping ability, this is useful for for the bigger an more complex leaps. This cost 30 Flasks!"
+autowrap = true
+
+[node name="Item3" type="Button" parent="Functionalities/shop ui/Panel2"]
+margin_left = 372.756
+margin_top = 101.871
+margin_right = 456.756
+margin_bottom = 185.871
+rect_scale = Vector2( 1.53, 1.53 )
+flat = true
+expand_icon = true
+script = ExtResource( 68 )
+
+[node name="Sprite2" type="Sprite" parent="Functionalities/shop ui/Panel2/Item3"]
+position = Vector2( 43.8849, 42.6086 )
+scale = Vector2( 3.26797, 3.26797 )
+texture = ExtResource( 56 )
+region_enabled = true
+region_rect = Rect2( 508.152, 129.842, 11.9463, 26.6801 )
+
+[node name="Label7 Text" type="Label" parent="Functionalities/shop ui/Panel2/Item3"]
+margin_left = 10.3463
+margin_top = 92.0083
+margin_right = 411.346
+margin_bottom = 153.008
+rect_scale = Vector2( 0.252424, 0.320724 )
+theme = SubResource( 38 )
+custom_colors/font_color = Color( 0.662745, 0.631373, 0.0666667, 1 )
+custom_fonts/font = SubResource( 39 )
+text = "Double Dose"
+
+[node name="Label3" type="Label" parent="Functionalities/shop ui/Panel2/Item3"]
+margin_left = -238.0
+margin_top = -102.0
+margin_right = 109.0
+margin_bottom = -19.0
+text = "This increases the value of every flask you collect to to x2 , this costs 50 flasks!"
+autowrap = true
 
 [node name="Panel3" type="Panel" parent="Functionalities/shop ui"]
-visible = false
-margin_left = -2221.67
-margin_top = -11428.4
-margin_right = -1672.67
-margin_bottom = -11191.4
+margin_left = -2217.5
+margin_top = -11473.8
+margin_right = -1668.5
+margin_bottom = -11236.8
 custom_styles/panel = SubResource( 42 )
 
 [node name="Border01" type="Sprite" parent="Functionalities/shop ui/Panel3"]
-position = Vector2( 39.875, 181.5 )
+position = Vector2( 47.5256, 191.301 )
 scale = Vector2( 5.83696, 6.06521 )
 texture = ExtResource( 55 )
 hframes = 2
@@ -3910,11 +3953,11 @@ hframes = 3
 frame = 1
 
 [node name="Label2 Text" type="Label" parent="Functionalities/shop ui/Panel3"]
-margin_left = 150.936
-margin_top = 137.853
-margin_right = 447.936
-margin_bottom = 198.853
-rect_scale = Vector2( 0.9, 1 )
+margin_left = 201.553
+margin_top = 86.1714
+margin_right = 476.553
+margin_bottom = 147.171
+rect_scale = Vector2( 0.616128, 0.677023 )
 theme = SubResource( 38 )
 custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
 custom_fonts/font = SubResource( 39 )
@@ -3963,10 +4006,10 @@ custom_fonts/font = SubResource( 39 )
 text = "Unusual Cola"
 
 [node name="Item2" type="Button" parent="Functionalities/shop ui/Panel3"]
-margin_left = 372.756
-margin_top = 101.871
-margin_right = 456.756
-margin_bottom = 185.871
+margin_left = 215.0
+margin_top = 103.285
+margin_right = 299.0
+margin_bottom = 187.285
 rect_scale = Vector2( 1.53, 1.53 )
 flat = true
 expand_icon = true
@@ -3991,11 +4034,56 @@ custom_fonts/font = SubResource( 39 )
 text = "Grey Slurp"
 
 [node name="Label2" type="Label" parent="Functionalities/shop ui/Panel3/Item2"]
-margin_left = -237.859
-margin_top = -102.287
-margin_right = -53.8594
-margin_bottom = -19.2869
-text = "[Place Holder]"
+margin_left = -138.0
+margin_top = -102.0
+margin_right = 218.0
+margin_bottom = -21.0
+text = "Boosts your jumping ability, this is useful for for the bigger an more complex leaps. This cost 30 Flasks!"
+autowrap = true
+
+[node name="Item3" type="Button" parent="Functionalities/shop ui/Panel3"]
+margin_left = 372.756
+margin_top = 101.871
+margin_right = 456.756
+margin_bottom = 185.871
+rect_scale = Vector2( 1.53, 1.53 )
+flat = true
+expand_icon = true
+script = ExtResource( 68 )
+
+[node name="Sprite2" type="Sprite" parent="Functionalities/shop ui/Panel3/Item3"]
+position = Vector2( 43.8849, 42.6086 )
+scale = Vector2( 3.26797, 3.26797 )
+texture = ExtResource( 56 )
+region_enabled = true
+region_rect = Rect2( 508.152, 129.842, 11.9463, 26.6801 )
+
+[node name="Label7 Text" type="Label" parent="Functionalities/shop ui/Panel3/Item3"]
+margin_left = 10.3463
+margin_top = 92.0083
+margin_right = 411.346
+margin_bottom = 153.008
+rect_scale = Vector2( 0.252424, 0.320724 )
+theme = SubResource( 38 )
+custom_colors/font_color = Color( 0.662745, 0.631373, 0.0666667, 1 )
+custom_fonts/font = SubResource( 39 )
+text = "Double Dose"
+
+[node name="Label3" type="Label" parent="Functionalities/shop ui/Panel3/Item3"]
+margin_left = -238.0
+margin_top = -102.0
+margin_right = 109.0
+margin_bottom = -19.0
+text = "This increases the value of every flask you collect to to x2 , this costs 50 flasks!"
+autowrap = true
+
+[node name="WindDetection" type="Area2D" parent="Functionalities"]
+position = Vector2( 1379.5, -5379 )
+scale = Vector2( 3, 3 )
+
+[node name="22" type="CollisionShape2D" parent="Functionalities/WindDetection"]
+position = Vector2( -700.813, -1898.33 )
+shape = SubResource( 51 )
 
 [node name="Shop Detection" type="Area2D" parent="Functionalities"]
 position = Vector2( 7, 2 )
@@ -4017,6 +4105,26 @@ shape = SubResource( 41 )
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Functionalities/Shop Detection"]
 position = Vector2( -258, -9993 )
 shape = SubResource( 41 )
+
+[node name="Front Decoration" type="Area2D" parent="Functionalities"]
+
+[node name="Plant" type="Sprite" parent="Functionalities/Front Decoration"]
+position = Vector2( -237.634, -378.808 )
+rotation = -0.527178
+scale = Vector2( 2.90385, 2.90385 )
+texture = ExtResource( 17 )
+
+[node name="Plant2" type="Sprite" parent="Functionalities/Front Decoration"]
+position = Vector2( -833.968, -1493.6 )
+rotation = 0.585874
+scale = Vector2( 2.90385, 2.90385 )
+texture = ExtResource( 17 )
+
+[node name="Plant3" type="Sprite" parent="Functionalities/Front Decoration"]
+position = Vector2( -1199.94, -1780.43 )
+rotation = 0.00526619
+scale = Vector2( 2.90385, 2.90385 )
+texture = ExtResource( 17 )
 
 [node name="AllFlasks" type="Area2D" parent="Functionalities"]
 
@@ -4424,17 +4532,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="shop ui" parent="." instance=ExtResource( 68 )]
-position = Vector2( -1279, -3967 )
-
 [connection signal="Tractorbeamactivate" from="Level2/Tractor beam" to="player" method="_on_Tractor_beam_Tractorbeamactivate"]
 [connection signal="Tractorbeamdeactivate" from="Level2/Tractor beam" to="player" method="_on_Tractor_beam_Tractorbeamdeactivate"]
 [connection signal="body_entered" from="Level2/Tractor beam" to="Level2/Tractor beam" method="_on_Tractor_beam_body_entered"]
 [connection signal="body_exited" from="Level2/Tractor beam" to="Level2/Tractor beam" method="_on_Tractor_beam_body_exited"]
 [connection signal="item1bought" from="player" to="player/Label" method="_on_player_item1bought"]
 [connection signal="flaskrecived" from="player/Label" to="player" method="_on_Label_flaskrecived"]
-[connection signal="body_entered" from="Functionalities/WindDetection" to="player" method="_on_WindDetection_body_entered"]
-[connection signal="body_exited" from="Functionalities/WindDetection" to="player" method="_on_WindDetection_body_exited"]
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_pressed"]
@@ -4442,7 +4545,10 @@ position = Vector2( -1279, -3967 )
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel/Item2" to="Functionalities/shop ui/Panel/Item2" method="_on_Item2_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel/Item2" to="Functionalities/shop ui/Panel/Item2" method="_on_Item2_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel/Item2" to="Functionalities/shop ui/Panel/Item2" method="_on_Item2_pressed"]
-[connection signal="shopitem2buy" from="Functionalities/shop ui/Panel/Item2" to="player" method="_on_Item2_shopitem2buy"]
+[connection signal="mouse_entered" from="Functionalities/shop ui/Panel/Item3" to="Functionalities/shop ui/Panel/Item3" method="_on_Item3_mouse_entered"]
+[connection signal="mouse_exited" from="Functionalities/shop ui/Panel/Item3" to="Functionalities/shop ui/Panel/Item3" method="_on_Item3_mouse_exited"]
+[connection signal="pressed" from="Functionalities/shop ui/Panel/Item3" to="Functionalities/shop ui/Panel/Item3" method="_on_Item3_pressed"]
+[connection signal="shopitem3buy" from="Functionalities/shop ui/Panel/Item3" to="player" method="_on_Item3_shopitem3buy"]
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel2/Item1" to="Functionalities/shop ui/Panel2/Item1" method="_on_Item1_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel2/Item1" to="Functionalities/shop ui/Panel2/Item1" method="_on_Item1_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel2/Item1" to="Functionalities/shop ui/Panel2/Item1" method="_on_Item1_pressed"]
@@ -4450,7 +4556,10 @@ position = Vector2( -1279, -3967 )
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel2/Item2" to="Functionalities/shop ui/Panel2/Item2" method="_on_Item2_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel2/Item2" to="Functionalities/shop ui/Panel2/Item2" method="_on_Item2_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel2/Item2" to="Functionalities/shop ui/Panel2/Item2" method="_on_Item2_pressed"]
-[connection signal="shopitem2buy" from="Functionalities/shop ui/Panel2/Item2" to="player" method="_on_Item2_shopitem2buy"]
+[connection signal="mouse_entered" from="Functionalities/shop ui/Panel2/Item3" to="Functionalities/shop ui/Panel2/Item3" method="_on_Item3_mouse_entered"]
+[connection signal="mouse_exited" from="Functionalities/shop ui/Panel2/Item3" to="Functionalities/shop ui/Panel2/Item3" method="_on_Item3_mouse_exited"]
+[connection signal="pressed" from="Functionalities/shop ui/Panel2/Item3" to="Functionalities/shop ui/Panel2/Item3" method="_on_Item3_pressed"]
+[connection signal="shopitem3buy" from="Functionalities/shop ui/Panel2/Item3" to="player" method="_on_Item3_shopitem3buy"]
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel3/Item1" to="Functionalities/shop ui/Panel3/Item1" method="_on_Item1_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel3/Item1" to="Functionalities/shop ui/Panel3/Item1" method="_on_Item1_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel3/Item1" to="Functionalities/shop ui/Panel3/Item1" method="_on_Item1_pressed"]
@@ -4458,7 +4567,12 @@ position = Vector2( -1279, -3967 )
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel3/Item2" to="Functionalities/shop ui/Panel3/Item2" method="_on_Item2_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel3/Item2" to="Functionalities/shop ui/Panel3/Item2" method="_on_Item2_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel3/Item2" to="Functionalities/shop ui/Panel3/Item2" method="_on_Item2_pressed"]
-[connection signal="shopitem2buy" from="Functionalities/shop ui/Panel3/Item2" to="player" method="_on_Item2_shopitem2buy"]
+[connection signal="mouse_entered" from="Functionalities/shop ui/Panel3/Item3" to="Functionalities/shop ui/Panel3/Item3" method="_on_Item3_mouse_entered"]
+[connection signal="mouse_exited" from="Functionalities/shop ui/Panel3/Item3" to="Functionalities/shop ui/Panel3/Item3" method="_on_Item3_mouse_exited"]
+[connection signal="pressed" from="Functionalities/shop ui/Panel3/Item3" to="Functionalities/shop ui/Panel3/Item3" method="_on_Item3_pressed"]
+[connection signal="shopitem3buy" from="Functionalities/shop ui/Panel3/Item3" to="player" method="_on_Item3_shopitem3buy"]
+[connection signal="body_entered" from="Functionalities/WindDetection" to="player" method="_on_WindDetection_body_entered"]
+[connection signal="body_exited" from="Functionalities/WindDetection" to="player" method="_on_WindDetection_body_exited"]
 [connection signal="ShopNeedsClosing" from="Functionalities/Shop Detection" to="Functionalities/shop ui" method="_on_Shop_Detection_ShopNeedsClosing"]
 [connection signal="ShopNeedsopening" from="Functionalities/Shop Detection" to="Functionalities/shop ui" method="_on_Shop_Detection_ShopNeedsopening"]
 [connection signal="body_entered" from="Functionalities/Shop Detection" to="Functionalities/Shop Detection" method="_on_Shop_Detection_body_entered"]

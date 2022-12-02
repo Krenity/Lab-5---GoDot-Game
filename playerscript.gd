@@ -4,6 +4,7 @@ var jumpheight = -50
 var isinwindRight = false
 var isinwindLeft = false
 var jumping = false
+var doubledose = false
 var windspeed = 1.05
 var count = 100
 var cheats = false
@@ -24,12 +25,7 @@ func _ready():
 
 func _physics_process(_delta):
 	
-	
-	
 	#CHEATS ENABLE/DISABLE
-	
-	
-	
 	print(jumpheight, motion, count, cheats)
 	if Input.is_action_just_pressed("cheatsenable"):
 		cheats = true
@@ -172,7 +168,6 @@ func _physics_process(_delta):
 
 
 #SHOP SYSTEM/UPGRADE
-var doubledose = false
 
 func _on_Label_flaskrecived():
 	if doubledose == false:
@@ -193,7 +188,6 @@ func _on_Item1_shopitem1buy():
 func _on_Item2_shopitem2buy():
 	if count >= 30:
 		$Label.text = str(count - 30)
-	
 		maxjump = -550
 
 
@@ -226,5 +220,6 @@ func _on_Item3_shopitem3buy():
 		count = count - 50
 		$label.text = str(count - 50)
 		doubledose = true
+	pass
 		
 	
