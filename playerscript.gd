@@ -1,9 +1,10 @@
 extends KinematicBody2D
 const maxjump = -400
 var jumpheight = -50
-var isinwind = false
+var isinwindRight = false
+var isinwindLeft = false
 var jumping = false
-var windspeed = 1.15
+var windspeed = 1.05
 var count = 0
 var cheats = false
 var bouncemax = 1
@@ -22,6 +23,13 @@ func _ready():
 
 
 func _physics_process(_delta):
+	
+	
+	
+	#CHEATS ENABLE/DISABLE
+	
+	
+	
 	print(jumpheight, motion, count, cheats)
 	if Input.is_action_just_pressed("cheatsenable"):
 		cheats = true
@@ -50,11 +58,20 @@ func _physics_process(_delta):
 			motion.x = 0
 		else:
 			motion = move_and_slide(motion, UP)
+			
+			
+			#GRAVITY + WIND + MATH
+			
+			
 	if cheats == false:
-		if isinwind == true:
+		if isinwindRight == true:
 			motion.x += 5
 			if motion.x > playerspeed*windspeed:
 				motion.x = playerspeed*windspeed
+		if isinwindLeft == true:
+			motion.x += -5
+			if motion.x > -playerspeed*windspeed:
+				motion.x = -playerspeed*windspeed
 		if Input.is_action_pressed("move_left"):
 			playerdirection = 0
 			$Sprite.flip_h = true
@@ -89,6 +106,11 @@ func _physics_process(_delta):
 			motion.y += gravity
 			if motion.y > maxgravity:
 				motion.y = maxgravity
+				
+				
+				#JUMPING
+				
+				
 		if is_on_floor():
 			if Input.is_action_pressed("move_down"):
 				while x == 1:
@@ -109,6 +131,11 @@ func _physics_process(_delta):
 				else:
 					motion.y = jumpheight
 					jumpheight = -100
+					
+					
+					#MOVEMENT
+					
+					
 		if Input.is_action_pressed("move_right"):
 			if is_on_floor():
 				$Sprite.flip_h = false
@@ -126,6 +153,10 @@ func _physics_process(_delta):
 				animation.play("Jump")
 				motion.x = 0
 				
+				
+			#MOVEMENT MATH	
+				
+				
 		else:
 			if is_on_ceiling():
 				motion.y = 5
@@ -138,6 +169,10 @@ func _physics_process(_delta):
 			jumping = false
 		motion = move_and_slide(motion, UP)
 		Engine.time_scale = 3
+
+
+#SHOP SYSTEM/UPGRADE
+
 
 func _on_Label_flaskrecived():
 	count += 1
@@ -174,8 +209,16 @@ func _on_Tractor_beam_Tractorbeamdeactivate():
 
 
 func _on_WindDetection_body_entered(_body):
-	isinwind = true
+	isinwindRight = true
 
 
 func _on_WindDetection_body_exited(_body):
-	isinwind = false
+	isinwindRight = false
+
+
+func _on_Left_body_entered(_body):
+	isinwindLeft = true
+
+
+func _on_Left_body_exited(_body):
+	isinwindLeft = false

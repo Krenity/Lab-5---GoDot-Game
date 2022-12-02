@@ -667,13 +667,13 @@ extents = Vector2( 47.0207, 14.9932 )
 colors = PoolColorArray( 0.0916138, 0.617188, 0.149098, 1, 0.110363, 0.21875, 0.0495605, 1 )
 
 [sub_resource type="Curve" id=53]
-_data = [ Vector2( 0.183168, 0.1375 ), 0.0, 0.0, 0, 0, Vector2( 0.524752, 0.510227 ), -5.90259, -5.90259, 0, 0, Vector2( 0.935644, 0.955682 ), 0.0, 0.0, 0, 0 ]
+_data = [ Vector2( 0.935644, 0.955682 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 238.917, 46.1667 )
 
 [sub_resource type="RectangleShape2D" id=52]
-extents = Vector2( 51.2917, 91.3333 )
+extents = Vector2( 256.167, 49.6666 )
 
 [sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 10, 51.6689 )
@@ -2683,16 +2683,19 @@ polygon = PoolVector2Array( 81, -2063, 81, -1697, 897, -1697, 895, -2031, 881, -
 position = Vector2( 0, -253.048 )
 scale = Vector2( 1, 0.92444 )
 polygon = PoolVector2Array( -389.333, -3356.21, -259, -3356.94, -255.333, -3367.39, -262.667, -3378, -385, -3376.77, -395, -3369.19 )
+one_way_collision = true
 
 [node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="Collisions"]
 position = Vector2( -13.3333, -366.667 )
 scale = Vector2( 1, 0.92444 )
 polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -332.333, -3366.72, -338.333, -3376.46, -385, -3376.77, -395, -3369.19 )
+one_way_collision = true
 
 [node name="CollisionPolygon2D46" type="CollisionPolygon2D" parent="Collisions"]
-position = Vector2( -50, -412.667 )
+position = Vector2( 17.6667, -413.333 )
 scale = Vector2( 0.436834, 0.924441 )
 polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -332.333, -3366.72, -338.333, -3376.46, -385, -3376.77, -395, -3369.19 )
+one_way_collision = true
 
 [node name="CollisionPolygon2D47" type="CollisionPolygon2D" parent="Collisions"]
 position = Vector2( 276.527, -519.99 )
@@ -2709,18 +2712,6 @@ polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -334.025, -3
 position = Vector2( -196.935, -657.995 )
 scale = Vector2( 0.430786, 0.924448 )
 polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -334.025, -3358.06, -332.333, -3366.72, -333.66, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -395, -3369.19, -393.767, -3357.71 )
-
-[node name="CollisionPolygon2D48" type="CollisionPolygon2D" parent="Collisions"]
-position = Vector2( 492.377, -520.662 )
-scale = Vector2( 2.01907, 0.924445 )
-polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -333.839, -3357.69, -332.333, -3366.72, -334.169, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -395, -3369.19, -393.767, -3357.71 )
-one_way_collision = true
-
-[node name="CollisionPolygon2D49" type="CollisionPolygon2D" parent="Collisions"]
-position = Vector2( 615.579, -521.995 )
-scale = Vector2( 1.96128, 0.924445 )
-polygon = PoolVector2Array( -389.333, -3356.21, -338.667, -3355.91, -334.43, -3358.42, -332.333, -3366.72, -334.26, -3373.92, -338.333, -3376.46, -385, -3376.77, -390.715, -3376.08, -393.745, -3374.64, -395, -3369.19, -393.767, -3357.71 )
-one_way_collision = true
 
 [node name="Front Decoration" type="Area2D" parent="."]
 
@@ -3397,8 +3388,9 @@ color_initial_ramp = SubResource( 33 )
 
 [node name="CPUParticles2D32" type="CPUParticles2D" parent="Particles"]
 position = Vector2( -2749, -10154 )
-amount = 500
+amount = 77
 lifetime = 10.0
+speed_scale = 0.26
 texture = ExtResource( 43 )
 emission_shape = 1
 emission_sphere_radius = 128.0
@@ -3410,16 +3402,20 @@ scale_amount_curve = SubResource( 53 )
 
 [node name="Functionalities" type="Area2D" parent="."]
 
-[node name="WindDetection" type="Area2D" parent="Functionalities"]
+[node name="WindColliders" type="Area2D" parent="Functionalities"]
 position = Vector2( 1379.5, -5379 )
 scale = Vector2( 3, 3 )
 
-[node name="22" type="CollisionShape2D" parent="Functionalities/WindDetection"]
-position = Vector2( -685.167, -1589.67 )
+[node name="Right2" type="Area2D" parent="Functionalities/WindColliders"]
+
+[node name="22" type="CollisionShape2D" parent="Functionalities/WindColliders/Right2"]
+position = Vector2( -696.167, -1587.33 )
 shape = SubResource( 51 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Functionalities/WindDetection"]
-position = Vector2( -853.833, -1951 )
+[node name="Left" type="Area2D" parent="Functionalities/WindColliders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Functionalities/WindColliders/Left"]
+position = Vector2( -683.667, -1812.67 )
 shape = SubResource( 52 )
 
 [node name="shop ui" type="Area2D" parent="Functionalities"]
@@ -3799,7 +3795,7 @@ margin_bottom = -19.2869
 text = "[Place Holder]"
 
 [node name="Shop Detection" type="Area2D" parent="Functionalities"]
-position = Vector2( 9, 0 )
+position = Vector2( 7, 2 )
 collision_layer = 3
 collision_mask = 3
 script = ExtResource( 15 )
@@ -4231,8 +4227,10 @@ __meta__ = {
 [connection signal="body_exited" from="Level2/Tractor beam" to="Level2/Tractor beam" method="_on_Tractor_beam_body_exited"]
 [connection signal="item1bought" from="player" to="player/Label" method="_on_player_item1bought"]
 [connection signal="flaskrecived" from="player/Label" to="player" method="_on_Label_flaskrecived"]
-[connection signal="body_entered" from="Functionalities/WindDetection" to="player" method="_on_WindDetection_body_entered"]
-[connection signal="body_exited" from="Functionalities/WindDetection" to="player" method="_on_WindDetection_body_exited"]
+[connection signal="body_entered" from="Functionalities/WindColliders/Right2" to="player" method="_on_WindDetection_body_entered"]
+[connection signal="body_exited" from="Functionalities/WindColliders/Right2" to="player" method="_on_WindDetection_body_exited"]
+[connection signal="body_entered" from="Functionalities/WindColliders/Left" to="player" method="_on_Left_body_entered"]
+[connection signal="body_exited" from="Functionalities/WindColliders/Left" to="player" method="_on_Left_body_exited"]
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_pressed"]
