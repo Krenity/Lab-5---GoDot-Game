@@ -1,8 +1,7 @@
 extends KinematicBody2D
 const maxjump = -400
 var jumpheight = -50
-var isinwindRight = false
-var isinwindLeft = false
+var isinwind = false
 var jumping = false
 var windspeed = 1.05
 var count = 0
@@ -64,14 +63,10 @@ func _physics_process(_delta):
 			
 			
 	if cheats == false:
-		if isinwindRight == true:
+		if isinwind == true:
 			motion.x += 5
 			if motion.x > playerspeed*windspeed:
 				motion.x = playerspeed*windspeed
-		if isinwindLeft == true:
-			motion.x += -5
-			if motion.x > -playerspeed*windspeed:
-				motion.x = -playerspeed*windspeed
 		if Input.is_action_pressed("move_left"):
 			playerdirection = 0
 			$Sprite.flip_h = true
@@ -209,8 +204,8 @@ func _on_Tractor_beam_Tractorbeamdeactivate():
 
 
 func _on_WindDetection_body_entered(_body):
-	isinwindRight = true
+	isinwind = true
 
 
 func _on_WindDetection_body_exited(_body):
-	isinwindRight = false
+	isinwind = false
