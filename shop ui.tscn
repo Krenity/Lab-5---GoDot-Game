@@ -1,0 +1,206 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://ShopItem2.gd" type="Script" id=1]
+[ext_resource path="res://shopItem3.gd" type="Script" id=2]
+[ext_resource path="res://Assets/font.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Images/FOOD.png" type="Texture" id=4]
+[ext_resource path="res://ShopItem1.gd" type="Script" id=5]
+[ext_resource path="res://shop ui.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Borders/border_01.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 10, 51.6689 )
+
+[sub_resource type="StyleBoxEmpty" id=42]
+
+[sub_resource type="Theme" id=38]
+
+[sub_resource type="DynamicFont" id=39]
+size = 61
+font_data = ExtResource( 3 )
+
+[node name="shop ui" type="Area2D"]
+position = Vector2( 886, -846 )
+scale = Vector2( 0.818037, 0.818037 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FixForShopUI" type="RigidBody2D" parent="."]
+position = Vector2( -1148.67, 1011.57 )
+scale = Vector2( 1.22244, 1.22244 )
+collision_layer = 14
+collision_mask = 14
+mode = 2
+mass = 4.0898
+angular_velocity = 0.037
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FixForShopUI"]
+position = Vector2( -846.239, -4131.66 )
+rotation = 0.374099
+shape = SubResource( 43 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -2100.0
+margin_top = -4141.0
+margin_right = -1551.0
+margin_bottom = -3904.0
+custom_styles/panel = SubResource( 42 )
+
+[node name="Border01" type="Sprite" parent="Panel"]
+position = Vector2( 47.5256, 191.301 )
+scale = Vector2( 5.83696, 6.06521 )
+texture = ExtResource( 7 )
+hframes = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Border02" type="Sprite" parent="Panel/Border01"]
+position = Vector2( 82.5987, 0 )
+texture = ExtResource( 7 )
+hframes = 2
+frame = 1
+
+[node name="Border03" type="Sprite" parent="Panel/Border01"]
+position = Vector2( 41.3101, 0 )
+scale = Vector2( 3.88751, 1 )
+texture = ExtResource( 7 )
+hframes = 3
+frame = 1
+
+[node name="Label2 Text" type="Label" parent="Panel"]
+margin_left = 201.553
+margin_top = 86.1714
+margin_right = 476.553
+margin_bottom = 147.171
+rect_scale = Vector2( 0.616128, 0.677023 )
+theme = SubResource( 38 )
+custom_colors/font_color = Color( 0.0862745, 0.835294, 1, 1 )
+custom_fonts/font = SubResource( 39 )
+text = "Shop"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Item1" type="Button" parent="Panel"]
+margin_left = 56.1658
+margin_top = 101.871
+margin_right = 140.166
+margin_bottom = 185.871
+rect_scale = Vector2( 1.5301, 1.5301 )
+flat = true
+expand_icon = true
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Panel/Item1"]
+margin_left = -30.9357
+margin_top = -102.28
+margin_right = 420.064
+margin_bottom = -19.2803
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Allows you to take better percision jumps by showing
+a charge bar below your character, this could be useful 
+for timed, specific jumps  that are needed later on in 
+this game. Costs you 10 Flasks"
+
+[node name="Sprite" type="Sprite" parent="Panel/Item1"]
+position = Vector2( 39.8878, 46.4065 )
+scale = Vector2( 3.26776, 3.26776 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 596.879, 497.036, 13.2578, 24.3423 )
+
+[node name="Label6 Text" type="Label" parent="Panel/Item1"]
+margin_left = -3.0
+margin_top = 90.0
+margin_right = 398.0
+margin_bottom = 151.0
+rect_scale = Vector2( 0.252424, 0.320724 )
+theme = SubResource( 38 )
+custom_colors/font_color = Color( 0.945098, 0.572549, 0.572549, 1 )
+custom_fonts/font = SubResource( 39 )
+text = "Unusual Cola"
+
+[node name="Item2" type="Button" parent="Panel"]
+margin_left = 215.0
+margin_top = 103.285
+margin_right = 299.0
+margin_bottom = 187.285
+rect_scale = Vector2( 1.53, 1.53 )
+flat = true
+expand_icon = true
+script = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="Panel/Item2"]
+position = Vector2( 43.8849, 42.6086 )
+scale = Vector2( 3.26797, 3.26797 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 570.693, 524, 23.3356, 24.022 )
+
+[node name="Label7 Text" type="Label" parent="Panel/Item2"]
+margin_left = 5.0
+margin_top = 89.0
+margin_right = 406.0
+margin_bottom = 150.0
+rect_scale = Vector2( 0.252424, 0.320724 )
+theme = SubResource( 38 )
+custom_colors/font_color = Color( 0.447059, 0.552941, 0.427451, 1 )
+custom_fonts/font = SubResource( 39 )
+text = "Grey Slurp"
+
+[node name="Label2" type="Label" parent="Panel/Item2"]
+margin_left = -138.0
+margin_top = -102.0
+margin_right = 218.0
+margin_bottom = -21.0
+text = "Boosts your jumping ability, this is useful for for the bigger an more complex leaps. This cost 30 Flasks!"
+autowrap = true
+
+[node name="Item3" type="Button" parent="Panel"]
+margin_left = 372.756
+margin_top = 101.871
+margin_right = 456.756
+margin_bottom = 185.871
+rect_scale = Vector2( 1.53, 1.53 )
+flat = true
+expand_icon = true
+script = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Panel/Item3"]
+position = Vector2( 43.8849, 42.6086 )
+scale = Vector2( 3.26797, 3.26797 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 508.152, 129.842, 11.9463, 26.6801 )
+
+[node name="Label7 Text" type="Label" parent="Panel/Item3"]
+margin_left = 10.3463
+margin_top = 92.0083
+margin_right = 411.346
+margin_bottom = 153.008
+rect_scale = Vector2( 0.252424, 0.320724 )
+theme = SubResource( 38 )
+custom_colors/font_color = Color( 0.662745, 0.631373, 0.0666667, 1 )
+custom_fonts/font = SubResource( 39 )
+text = "Double Dose"
+
+[node name="Label3" type="Label" parent="Panel/Item3"]
+margin_left = -238.0
+margin_top = -102.0
+margin_right = 109.0
+margin_bottom = -19.0
+text = "This increases the value of every flask you collect to to x2 , this costs 50 flasks!"
+autowrap = true
+
+[connection signal="mouse_entered" from="Panel/Item1" to="Panel/Item1" method="_on_Item1_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/Item1" to="Panel/Item1" method="_on_Item1_mouse_exited"]
+[connection signal="pressed" from="Panel/Item1" to="Panel/Item1" method="_on_Item1_pressed"]
+[connection signal="mouse_entered" from="Panel/Item2" to="Panel/Item2" method="_on_Item2_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/Item2" to="Panel/Item2" method="_on_Item2_mouse_exited"]
+[connection signal="pressed" from="Panel/Item2" to="Panel/Item2" method="_on_Item2_pressed"]
+[connection signal="mouse_entered" from="Panel/Item3" to="Panel/Item3" method="_on_Item3_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/Item3" to="Panel/Item3" method="_on_Item3_mouse_exited"]
+[connection signal="pressed" from="Panel/Item3" to="Panel/Item3" method="_on_Item3_pressed"]

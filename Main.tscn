@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=2]
+[gd_scene load_steps=113 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -67,6 +67,7 @@
 [ext_resource path="res://Tractor beam.gd" type="Script" id=65]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (1).png" type="Texture" id=66]
 [ext_resource path="res://Assets/Images/pixil-frame-0 (62).png" type="Texture" id=67]
+[ext_resource path="res://shop ui.tscn" type="PackedScene" id=68]
 
 [sub_resource type="Curve" id=53]
 _data = [ Vector2( 0.935644, 0.955682 ), 0.0, 0.0, 0, 0 ]
@@ -4422,6 +4423,9 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="shop ui" parent="." instance=ExtResource( 68 )]
+position = Vector2( -1279, -3967 )
 
 [connection signal="Tractorbeamactivate" from="Level2/Tractor beam" to="player" method="_on_Tractor_beam_Tractorbeamactivate"]
 [connection signal="Tractorbeamdeactivate" from="Level2/Tractor beam" to="player" method="_on_Tractor_beam_Tractorbeamdeactivate"]
