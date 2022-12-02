@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=2]
+[gd_scene load_steps=112 format=2]
 
 [ext_resource path="res://Assets/Blocks/tileset_mk_16_16_nature_tileset_godot.tres" type="TileSet" id=1]
 [ext_resource path="res://playerscene.tscn" type="PackedScene" id=2]
@@ -671,9 +671,6 @@ _data = [ Vector2( 0.935644, 0.955682 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 238.917, 46.1667 )
-
-[sub_resource type="RectangleShape2D" id=52]
-extents = Vector2( 256.167, 49.6666 )
 
 [sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 10, 51.6689 )
@@ -3406,17 +3403,9 @@ scale_amount_curve = SubResource( 53 )
 position = Vector2( 1379.5, -5379 )
 scale = Vector2( 3, 3 )
 
-[node name="Right2" type="Area2D" parent="Functionalities/WindColliders"]
-
-[node name="22" type="CollisionShape2D" parent="Functionalities/WindColliders/Right2"]
+[node name="22" type="CollisionShape2D" parent="Functionalities/WindColliders"]
 position = Vector2( -696.167, -1587.33 )
 shape = SubResource( 51 )
-
-[node name="Left" type="Area2D" parent="Functionalities/WindColliders"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Functionalities/WindColliders/Left"]
-position = Vector2( -683.667, -1812.67 )
-shape = SubResource( 52 )
 
 [node name="shop ui" type="Area2D" parent="Functionalities"]
 position = Vector2( 892.405, -855.119 )
@@ -4227,10 +4216,6 @@ __meta__ = {
 [connection signal="body_exited" from="Level2/Tractor beam" to="Level2/Tractor beam" method="_on_Tractor_beam_body_exited"]
 [connection signal="item1bought" from="player" to="player/Label" method="_on_player_item1bought"]
 [connection signal="flaskrecived" from="player/Label" to="player" method="_on_Label_flaskrecived"]
-[connection signal="body_entered" from="Functionalities/WindColliders/Right2" to="player" method="_on_WindDetection_body_entered"]
-[connection signal="body_exited" from="Functionalities/WindColliders/Right2" to="player" method="_on_WindDetection_body_exited"]
-[connection signal="body_entered" from="Functionalities/WindColliders/Left" to="player" method="_on_Left_body_entered"]
-[connection signal="body_exited" from="Functionalities/WindColliders/Left" to="player" method="_on_Left_body_exited"]
 [connection signal="mouse_entered" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_entered"]
 [connection signal="mouse_exited" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_mouse_exited"]
 [connection signal="pressed" from="Functionalities/shop ui/Panel/Item1" to="Functionalities/shop ui/Panel/Item1" method="_on_Item1_pressed"]

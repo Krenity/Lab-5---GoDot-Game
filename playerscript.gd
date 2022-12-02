@@ -214,11 +214,3 @@ func _on_WindDetection_body_entered(_body):
 
 func _on_WindDetection_body_exited(_body):
 	isinwindRight = false
-
-
-func _on_Left_body_entered(_body):
-	isinwindLeft = true
-
-
-func _on_Left_body_exited(_body):
-	isinwindLeft = false
