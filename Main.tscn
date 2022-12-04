@@ -2322,7 +2322,7 @@ scale = Vector2( 1.73036, 1.73036 )
 texture = ExtResource( 10 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1042, -9223 )
+position = Vector2( -848, 471 )
 collision_layer = 32769
 collision_mask = 32769
 __meta__ = {
