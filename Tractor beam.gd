@@ -7,5 +7,5 @@ func _on_Tractor_beam_body_entered(_body):
 	emit_signal("Tractorbeamactivate")
 
 
-func _on_Tractor_beam_body_exited(body):
+func _on_Tractor_beam_body_exited(_body):
 	emit_signal("Tractorbeamdeactivate")
