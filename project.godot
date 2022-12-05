@@ -11,11 +11,16 @@ config_version=4
 [application]
 
 config/name="Lab- 5"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://MainMenue.tscn"
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [display]
 
@@ -23,6 +28,8 @@ window/size/width=1440
 window/size/height=1080
 window/size/resizable=false
 window/size/borderless=true
+window/dpi/allow_hidpi=true
+window/handheld/orientation="portrait"
 window/stretch/aspect="keep"
 
 [gui]
@@ -104,4 +111,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/options/use_nvidia_rect_flicker_workaround=true
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"

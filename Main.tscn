@@ -690,7 +690,7 @@ extents = Vector2( 189.369, 154.5 )
 extents = Vector2( 815.851, 2225.31 )
 
 [sub_resource type="RectangleShape2D" id=46]
-extents = Vector2( 650.5, 339.401 )
+extents = Vector2( 650.5, 399.901 )
 
 [sub_resource type="DynamicFont" id=47]
 size = 21
@@ -713,11 +713,17 @@ texture = ExtResource( 44 )
 position = Vector2( 1115, -189.082 )
 scale = Vector2( 2.904, 1.38954 )
 texture = ExtResource( 66 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Pixil-frame-0(62)" type="Sprite" parent="Level4/backround/Pixil-frame-0(1)"]
 position = Vector2( -5.18894, -876.609 )
 scale = Vector2( 0.751195, 1.97097 )
 texture = ExtResource( 67 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Decorations" type="Area2D" parent="Level4"]
 
@@ -739,6 +745,10 @@ scale_amount_curve = SubResource( 53 )
 [node name="ShopAnim3" parent="Level4/Decorations" instance=ExtResource( 14 )]
 position = Vector2( 1571, -42.0186 )
 scale = Vector2( 3.2435, 3.16946 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Particles" type="Area2D" parent="Level4"]
 
@@ -2322,7 +2332,7 @@ scale = Vector2( 1.73036, 1.73036 )
 texture = ExtResource( 10 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1042, -9223 )
+position = Vector2( -780, 445 )
 collision_layer = 32769
 collision_mask = 32769
 __meta__ = {
@@ -6738,6 +6748,7 @@ collision_layer = 32768
 collision_mask = 32768
 
 [node name="22" type="CollisionShape2D" parent="Functionalities/WindDetection"]
+visible = false
 position = Vector2( -700.813, -1918.72 )
 shape = SubResource( 51 )
 
@@ -7101,18 +7112,25 @@ bus = "Backround"
 [node name="Ending" type="Area2D" parent="Functionalities"]
 position = Vector2( 38, -2306 )
 script = ExtResource( 64 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Functionalities/Ending"]
-position = Vector2( -740.5, -10537.4 )
+position = Vector2( -740.5, -10476.9 )
 shape = SubResource( 46 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="screen" type="Sprite" parent="Functionalities/Ending"]
+visible = false
 position = Vector2( -582, -10733 )
 scale = Vector2( 3.66414, 3.22216 )
 texture = ExtResource( 48 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label" type="Label" parent="Functionalities/Ending/screen"]
 margin_left = -176.046
@@ -7124,18 +7142,24 @@ custom_fonts/font = SubResource( 47 )
 text = "TO BE CONTINUED"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label2" type="Label" parent="Functionalities/Ending/screen"]
-margin_left = -174.674
-margin_top = 105.109
-margin_right = 86.3255
-margin_bottom = 196.109
+margin_left = -173.574
+margin_top = 103.967
+margin_right = 87.4258
+margin_bottom = 194.967
 rect_rotation = -0.187698
 custom_colors/font_color = Color( 0.517647, 0.152941, 0.152941, 1 )
 custom_fonts/font = SubResource( 47 )
 text = "The End"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label3" type="Label" parent="Functionalities/Ending/screen"]
 anchor_left = 0.000285906
@@ -7158,6 +7182,7 @@ align = 1
 valign = 1
 autowrap = true
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
